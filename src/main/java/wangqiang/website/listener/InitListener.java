@@ -99,15 +99,19 @@ public class InitListener  implements ApplicationListener<ApplicationReadyEvent>
         public MusicVo call() throws Exception {
             LOGGER.info("Enter task and current num={}",andIncrement);
             MusicVo musicVo=null;
+            int again=0;
             JSONObject jsonObject = spiderMetMusic("http://music.163.com/weapi/v1/resource/comments/R_SO_4_" + andIncrement + "?csrf_token=");
-            if (jsonObject!=null&&jsonObject.getInteger("code") == 200) {
-                Integer total = jsonObject.getInteger("total");
-                if (total != 0) {
-                    musicVo= new MusicVo();
-                    musicVo.setCommitTotal(total);
-                    musicVo.setId(andIncrement);
-                }
-            }
+             if (jsonObject != null && jsonObject.getInteger("code") == 200) {
+                 Integer total = jsonObject.getInteger("total");
+                 if (total != 0) {
+                     musicVo = new MusicVo();
+                     musicVo.setCommitTotal(total);
+                     musicVo.setId(andIncrement);
+                 }
+             } else {
+//                 again++;
+//                 TODO ip失效，重试
+             }
             LOGGER.info("Exit task and musicVo={}",musicVo);
             return musicVo;
         }

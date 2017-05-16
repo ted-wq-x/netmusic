@@ -15,6 +15,7 @@ import org.apache.http.impl.client.HttpClientBuilder;
 import org.apache.http.util.EntityUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import wangqiang.website.utils.ProxyPool;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -34,26 +35,24 @@ public class Spider {
         HttpClientBuilder builder = HttpClientBuilder.create();
         CloseableHttpClient build = builder.build();
         RequestBuilder post = RequestBuilder.post(postUrl);
+
         post.addHeader("Referer", "http://music.163.com/")
                 .addHeader("Host", "music.163.com")
                 .addHeader("User-Agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36")
                 .addHeader("Accept", "*/*")
                 .addHeader("Accept-Encoding", "gzip, deflate");
 
+        post.addParameter("params", "/ppnB8jFMOE50oPqknmtoHQvx2WvXt5eok5obFF6MF1UCyAS6RiMrmzud7B60km4PHVAislHLtfy7LRAQknZJDCzHOE9LZAM83EP2pni8kd/QbtucTc9el7o0TqPr2GHDdS538g+c30wGAZXK/AMvdJNm5M2xFk+b2dEJeFOjH/IBRzn0gOApCawycIRGQmN95MQ9lxmWUcMQrO5pwIdM3Ox5O9wDvHy+8Q3Nb3pnQw=")
+                .addParameter("encSecKey", "5bf9c0fcad84cec2089be52f3500f6a38681fa16e7ae5969f6c3af9fd08afd215b698a424fbc7af8acbd7df35cdd198659129b3c1a9bf9730901591406d413e654d49bdc717a774d5adf43b36e90dc25bed6c631e45ed242690c56932f44125ddc40fe0b5fcb5efcaa211ce666740b1e8de72416d2277f4e00f3c6a4a58e1194");
+
+        HttpHost host = ProxyPool.getHost();
+
         RequestConfig.Builder config = RequestConfig.custom().setConnectionRequestTimeout(5000)
                 .setSocketTimeout(5000)
                 .setConnectTimeout(5000)
-                .setCookieSpec(CookieSpecs.STANDARD).setProxy(new HttpHost("127.0.0.1",1080));
+                .setCookieSpec(CookieSpecs.STANDARD).setProxy(host);
         post.setConfig(config.build());
 
-
-/*
-        EncryptTools encryptTools = new EncryptTools();
-        Map<String, String> stringStringMap = encryptTools.encryptedRequest(jsonObj);
-        post.addParameter("params", stringStringMap.get("params"))
-                .addParameter("encSecKey", stringStringMap.get("encSecKey"));*/
-        post.addParameter("params", "/ppnB8jFMOE50oPqknmtoHQvx2WvXt5eok5obFF6MF1UCyAS6RiMrmzud7B60km4PHVAislHLtfy7LRAQknZJDCzHOE9LZAM83EP2pni8kd/QbtucTc9el7o0TqPr2GHDdS538g+c30wGAZXK/AMvdJNm5M2xFk+b2dEJeFOjH/IBRzn0gOApCawycIRGQmN95MQ9lxmWUcMQrO5pwIdM3Ox5O9wDvHy+8Q3Nb3pnQw=")
-                .addParameter("encSecKey", "5bf9c0fcad84cec2089be52f3500f6a38681fa16e7ae5969f6c3af9fd08afd215b698a424fbc7af8acbd7df35cdd198659129b3c1a9bf9730901591406d413e654d49bdc717a774d5adf43b36e90dc25bed6c631e45ed242690c56932f44125ddc40fe0b5fcb5efcaa211ce666740b1e8de72416d2277f4e00f3c6a4a58e1194");
         HttpUriRequest build1 = post.build();
         HttpResponse execute = null;
         byte[] bytes = new byte[0];
@@ -62,7 +61,9 @@ public class Spider {
             InputStream content = execute.getEntity().getContent();
             bytes = IOUtils.toByteArray(content);
         } catch (IOException e) {
-            e.printStackTrace();
+            LOGGER.info("Catch IOException and remove ip from ipPools");
+            ProxyPool.removeIpFromPool(host);
+            return null;
         } finally {
             if (execute != null) {
                 EntityUtils.consumeQuietly(execute.getEntity());

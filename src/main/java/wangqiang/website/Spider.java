@@ -4,13 +4,17 @@ import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 import org.apache.commons.io.IOUtils;
+import org.apache.http.HttpHost;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.config.CookieSpecs;
 import org.apache.http.client.config.RequestConfig;
+import org.apache.http.client.methods.HttpUriRequest;
 import org.apache.http.client.methods.RequestBuilder;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClientBuilder;
 import org.apache.http.util.EntityUtils;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -21,6 +25,7 @@ import java.util.*;
  */
 public class Spider {
 
+    private static final Logger LOGGER = LoggerFactory.getLogger(Spider.class);
 
     public static JSONObject spiderMetMusic(String postUrl) {
         if (postUrl == null) {
@@ -38,19 +43,22 @@ public class Spider {
         RequestConfig.Builder config = RequestConfig.custom().setConnectionRequestTimeout(5000)
                 .setSocketTimeout(5000)
                 .setConnectTimeout(5000)
-                .setCookieSpec(CookieSpecs.STANDARD);
+                .setCookieSpec(CookieSpecs.STANDARD).setProxy(new HttpHost("127.0.0.1",1080));
         post.setConfig(config.build());
+
+
 /*
         EncryptTools encryptTools = new EncryptTools();
         Map<String, String> stringStringMap = encryptTools.encryptedRequest(jsonObj);
         post.addParameter("params", stringStringMap.get("params"))
                 .addParameter("encSecKey", stringStringMap.get("encSecKey"));*/
-        post.addParameter("params", "h1m21We/65UBosHAYHVyX0z/w2bqBnvhjHsrLK09Gbivu6LbBr/O9qbq+Q8kfHavJJ/YHz6+RlCw1UnoSsRFml+YmkP7ne9VIIr5vMdhpZ2UoXfWHa84WeCGdzUFuUya4ngIKJyyQyS7N2+madxg8QLNRh8jDazesxTPrzgDvzLKuN4jWbp8ZYBWONE9QZS3hVSxGYTjZxmjv0ARICyRSdxeRdtqPeDfPq9bhc1D5J+lfQn/njUrBQdH/HYiEIT9uuEWPyfRfBmRD8zYSaTZJ5k4Q7Tkp2X9/dGiwmLk/Zs=")
-                .addParameter("encSecKey", "045e7c05a92df2112e61178543f91d8235f8c0fb48cc2f370bcd45535c99d68a98be82ea3d82a51ab00aeb4368afd76351e65964fc595980f47f73874d16a8e54571ac9aa38f234a1489544c75ccac4c18e107bcfb83ed82332c2938b67a62da0ebd03dd9b201c4200fd808cd1689956cd7e34629e525f3ce82976f43b024c49");
+        post.addParameter("params", "/ppnB8jFMOE50oPqknmtoHQvx2WvXt5eok5obFF6MF1UCyAS6RiMrmzud7B60km4PHVAislHLtfy7LRAQknZJDCzHOE9LZAM83EP2pni8kd/QbtucTc9el7o0TqPr2GHDdS538g+c30wGAZXK/AMvdJNm5M2xFk+b2dEJeFOjH/IBRzn0gOApCawycIRGQmN95MQ9lxmWUcMQrO5pwIdM3Ox5O9wDvHy+8Q3Nb3pnQw=")
+                .addParameter("encSecKey", "5bf9c0fcad84cec2089be52f3500f6a38681fa16e7ae5969f6c3af9fd08afd215b698a424fbc7af8acbd7df35cdd198659129b3c1a9bf9730901591406d413e654d49bdc717a774d5adf43b36e90dc25bed6c631e45ed242690c56932f44125ddc40fe0b5fcb5efcaa211ce666740b1e8de72416d2277f4e00f3c6a4a58e1194");
+        HttpUriRequest build1 = post.build();
         HttpResponse execute = null;
         byte[] bytes = new byte[0];
         try {
-            execute = build.execute(post.build());
+            execute = build.execute(build1);
             InputStream content = execute.getEntity().getContent();
             bytes = IOUtils.toByteArray(content);
         } catch (IOException e) {
@@ -60,8 +68,15 @@ public class Spider {
                 EntityUtils.consumeQuietly(execute.getEntity());
             }
         }
+        String type = execute.getEntity().getContentType().getValue();
         String s = new String(bytes);
-        return JSON.parseObject(s);
+        if (type.contains("application/json")||type.contains("text/plain")) {
+            return JSON.parseObject(s);
+        } else if(type.contains("text/html")) {
+            LOGGER.info("ERROR html return:{}",s);
+            return null;
+        }
+        return null;
     }
 
     /**

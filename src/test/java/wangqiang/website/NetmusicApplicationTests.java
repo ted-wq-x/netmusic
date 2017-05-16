@@ -18,11 +18,7 @@ public class NetmusicApplicationTests {
 	
 	@Test
 	public void contextLoads() {
-		MusicVo musicVo = new MusicVo();
-		musicVo.setCommitTotal(12);
-		musicVo.setId(1);
-		musicRepository.save(musicVo);
-		Assert.assertEquals(musicRepository.count(),1);
+		System.out.println(musicRepository.selectMax());
 	}
 
 }

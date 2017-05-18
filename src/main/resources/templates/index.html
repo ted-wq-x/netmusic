@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>网易云音乐评论排行榜</title>
+</head>
+<body  background="http://onmb5ryy1.bkt.clouddn.com/quora.png" >
+<th:block th:each="index:${ids}">
+    <div style="text-align: center;">
+        <div>
+            <div th:text="'评论数：'+${index.commitTotal}"></div>
+        </div>
+        <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86"
+                th:src="@{'https://music.163.com/outchain/player?type=2&amp;id='+${index.id}+'&amp;auto=0&amp;height=66'}"></iframe>
+    </div>
+    <br/>
+</th:block>
+
+</body>
+</html>

@@ -18,7 +18,7 @@ public class NetmusicApplicationTests {
 	
 	@Test
 	public void contextLoads() {
-		System.out.println(musicRepository.selectMax());
+		System.out.println(musicRepository.findMaxCommont());
 	}
 
 }

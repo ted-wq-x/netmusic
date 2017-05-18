@@ -1,7 +1,6 @@
-package wangqiang.website;
+package wangqiang.website.utils;
 
 import com.alibaba.fastjson.JSON;
-import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 import org.apache.commons.io.IOUtils;
 import org.apache.http.HttpHost;
@@ -15,11 +14,11 @@ import org.apache.http.impl.client.HttpClientBuilder;
 import org.apache.http.util.EntityUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import wangqiang.website.utils.ProxyPool;
 
 import java.io.IOException;
 import java.io.InputStream;
-import java.util.*;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * Created by wangq on 2017/5/15.
@@ -28,8 +27,25 @@ public class Spider {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(Spider.class);
 
-    public static JSONObject spiderMetMusic(String postUrl) {
-        if (postUrl == null) {
+    public static JSONObject spiderMetMusic(String url) {
+        JSONObject jsonObject=null;
+//        非法ip重试
+        for (int i = 0; i < 3; i++) {
+            HttpHost host = ProxyPool.getHost();
+            if (host == null) {
+                return jsonObject;
+            }
+            jsonObject = spiderMetMusic(url, host);
+            if (jsonObject != null) {
+                return jsonObject;
+            }
+        }
+        return jsonObject;
+    }
+
+    public static JSONObject spiderMetMusic(String postUrl,HttpHost host) {
+        LOGGER.info("Enter spiderMetMusic url={} ,host={}",postUrl,host);
+        if (postUrl == null|| host==null) {
             return null;
         }
         HttpClientBuilder builder = HttpClientBuilder.create();
@@ -44,8 +60,6 @@ public class Spider {
 
         post.addParameter("params", "/ppnB8jFMOE50oPqknmtoHQvx2WvXt5eok5obFF6MF1UCyAS6RiMrmzud7B60km4PHVAislHLtfy7LRAQknZJDCzHOE9LZAM83EP2pni8kd/QbtucTc9el7o0TqPr2GHDdS538g+c30wGAZXK/AMvdJNm5M2xFk+b2dEJeFOjH/IBRzn0gOApCawycIRGQmN95MQ9lxmWUcMQrO5pwIdM3Ox5O9wDvHy+8Q3Nb3pnQw=")
                 .addParameter("encSecKey", "5bf9c0fcad84cec2089be52f3500f6a38681fa16e7ae5969f6c3af9fd08afd215b698a424fbc7af8acbd7df35cdd198659129b3c1a9bf9730901591406d413e654d49bdc717a774d5adf43b36e90dc25bed6c631e45ed242690c56932f44125ddc40fe0b5fcb5efcaa211ce666740b1e8de72416d2277f4e00f3c6a4a58e1194");
-
-        HttpHost host = ProxyPool.getHost();
 
         RequestConfig.Builder config = RequestConfig.custom().setConnectionRequestTimeout(5000)
                 .setSocketTimeout(5000)
@@ -71,13 +85,21 @@ public class Spider {
         }
         String type = execute.getEntity().getContentType().getValue();
         String s = new String(bytes);
+
         if (type.contains("application/json")||type.contains("text/plain")) {
-            return JSON.parseObject(s);
+            LOGGER.info("return msg type={}",type);
+            JSONObject jsonObject = null;
+            try {
+                jsonObject = JSON.parseObject(s);
+            } catch (Exception e) {
+               LOGGER.error("json parse fail:e={}",e.getMessage());
+            }
+            return jsonObject;
         } else if(type.contains("text/html")) {
             LOGGER.info("ERROR html return:{}",s);
-            return null;
+            return new JSONObject();
         }
-        return null;
+        return new JSONObject();
     }
 
     /**

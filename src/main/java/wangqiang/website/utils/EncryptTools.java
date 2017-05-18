@@ -1,4 +1,4 @@
-package wangqiang.website;
+package wangqiang.website.utils;
 
 import com.alibaba.fastjson.JSONObject;
 import org.apache.commons.codec.binary.Hex;

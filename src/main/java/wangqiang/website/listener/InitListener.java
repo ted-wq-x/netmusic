@@ -35,7 +35,7 @@ public class InitListener implements ApplicationListener<ApplicationReadyEvent> 
     /**
      * 限制向任务队列提交任务的个数
      */
-    private LinkedBlockingQueue queue = new LinkedBlockingQueue((Runtime.getRuntime().availableProcessors() + 1)*2);
+    private LinkedBlockingQueue queue = new LinkedBlockingQueue(25);
     /**
      * 缓存爬取的数据，达到100个时存入数据库
      */

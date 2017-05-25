@@ -91,6 +91,7 @@ public class InitListener implements ApplicationListener<ApplicationReadyEvent> 
         while (true) {
             try {
                 Future<MusicVo> take = service.take();
+//                出现null exception
                 MusicVo musicVousicVo = take.get();
                 if (musicVousicVo != null) {
                     blockingQueue.add(musicVousicVo);

@@ -18,7 +18,8 @@ public class NetmusicApplicationTests {
 	
 	@Test
 	public void contextLoads() {
-		System.out.println(musicRepository.findMaxCommont());
+		System.out.println(musicRepository.countMusicVo());
+		String naem = "{\"name\":\"wq\"}";
 	}
 
 }

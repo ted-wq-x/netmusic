@@ -18,4 +18,7 @@ public interface MusicRepository extends JpaRepository<MusicVo,Integer> {
 
     @Query(value = "SELECT * from netmusic GROUP BY commit_total DESC LIMIT 10",nativeQuery = true)
     List<MusicVo> findMaxCommont();
+
+    @Query(value = "SELECT count(*) FROM netmusic",nativeQuery=true)
+    Integer countMusicVo();
 }

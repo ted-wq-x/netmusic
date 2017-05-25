@@ -35,7 +35,7 @@ public class InitListener implements ApplicationListener<ApplicationReadyEvent> 
     /**
      * 限制向任务队列提交任务的个数
      */
-    private LinkedBlockingQueue queue = new LinkedBlockingQueue(25);
+    private LinkedBlockingQueue<Integer> queue = new LinkedBlockingQueue<>(25);
     /**
      * 缓存爬取的数据，达到100个时存入数据库
      */
@@ -45,7 +45,7 @@ public class InitListener implements ApplicationListener<ApplicationReadyEvent> 
     private void init() {
 //     存放任务执行结果的队列
         BlockingQueue<Future<MusicVo>> completeTask = new LinkedBlockingQueue<>();
-        ExecutorService executorService = Executors.newFixedThreadPool((Runtime.getRuntime().availableProcessors() + 1)*2);
+        ExecutorService executorService = Executors.newFixedThreadPool((Runtime.getRuntime().availableProcessors() + 1) * 2);
         service = new ExecutorCompletionService<>(executorService, completeTask);
     }
 
@@ -90,7 +90,8 @@ public class InitListener implements ApplicationListener<ApplicationReadyEvent> 
         LOGGER.info("Enter spider complateTask method");
         while (true) {
             try {
-                MusicVo musicVousicVo = service.take().get();
+                Future<MusicVo> take = service.take();
+                MusicVo musicVousicVo = take.get();
                 if (musicVousicVo != null) {
                     blockingQueue.add(musicVousicVo);
                     if (blockingQueue.size() == 100) {
@@ -130,7 +131,7 @@ public class InitListener implements ApplicationListener<ApplicationReadyEvent> 
             queue.take();
             MusicVo musicVo = null;
             JSONObject jsonObject = spiderMetMusic("http://music.163.com/weapi/v1/resource/comments/R_SO_4_" + andIncrement + "?csrf_token=");
-            if (jsonObject != null && jsonObject.getInteger("code")!=null &&jsonObject.getInteger("code")== 200) {
+            if (jsonObject != null && jsonObject.getInteger("code") != null && jsonObject.getInteger("code") == 200) {
                 Integer total = jsonObject.getInteger("total");
                 if (total != 0) {
                     musicVo = new MusicVo();

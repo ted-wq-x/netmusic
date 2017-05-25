@@ -20,6 +20,7 @@ public class index {
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.setViewName("index");
         modelAndView.addObject("ids",repository.findMaxCommont());
+        modelAndView.addObject("counts",repository.countMusicVo());
         return modelAndView;
     }
 }

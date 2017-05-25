@@ -152,6 +152,8 @@ public class Spider {
     /**
      * 获取用户歌单
      *
+     * http://music.163.com/weapi/v1/play/record?csrf_token=
+     *
      * @param userId
      */
     public void getUserPlayList(Integer userId) {

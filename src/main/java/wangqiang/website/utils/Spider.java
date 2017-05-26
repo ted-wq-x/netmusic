@@ -29,13 +29,16 @@ public class Spider {
 
     public static JSONObject spiderMetMusic(String url) {
         JSONObject jsonObject=null;
+//        生成请求参数
+        Map<String, String> stringStringMap = generatePara(url);
+
 //        非法ip重试
         for (int i = 0; i < 3; i++) {
             HttpHost host = ProxyPool.getHost();
             if (host == null) {
                 return jsonObject;
             }
-            jsonObject = spiderMetMusic(url, host);
+            jsonObject = spiderMetMusic(url, host,stringStringMap);
             if (jsonObject != null) {
                 return jsonObject;
             }
@@ -43,7 +46,7 @@ public class Spider {
         return jsonObject;
     }
 
-    public static JSONObject spiderMetMusic(String postUrl,HttpHost host) {
+    public static JSONObject spiderMetMusic(String postUrl,HttpHost host,Map<String, String>  map) {
         LOGGER.info("Enter spiderMetMusic url={} ,host={}",postUrl,host);
         if (postUrl == null|| host==null) {
             return null;
@@ -58,8 +61,8 @@ public class Spider {
                 .addHeader("Accept", "*/*")
                 .addHeader("Accept-Encoding", "gzip, deflate");
 
-        post.addParameter("params", "/ppnB8jFMOE50oPqknmtoHQvx2WvXt5eok5obFF6MF1UCyAS6RiMrmzud7B60km4PHVAislHLtfy7LRAQknZJDCzHOE9LZAM83EP2pni8kd/QbtucTc9el7o0TqPr2GHDdS538g+c30wGAZXK/AMvdJNm5M2xFk+b2dEJeFOjH/IBRzn0gOApCawycIRGQmN95MQ9lxmWUcMQrO5pwIdM3Ox5O9wDvHy+8Q3Nb3pnQw=")
-                .addParameter("encSecKey", "5bf9c0fcad84cec2089be52f3500f6a38681fa16e7ae5969f6c3af9fd08afd215b698a424fbc7af8acbd7df35cdd198659129b3c1a9bf9730901591406d413e654d49bdc717a774d5adf43b36e90dc25bed6c631e45ed242690c56932f44125ddc40fe0b5fcb5efcaa211ce666740b1e8de72416d2277f4e00f3c6a4a58e1194");
+        post.addParameter("params", map.get("params"))
+                .addParameter("encSecKey", map.get("encSecKey"));
 
         RequestConfig.Builder config = RequestConfig.custom().setConnectionRequestTimeout(5000)
                 .setSocketTimeout(5000)
@@ -103,61 +106,112 @@ public class Spider {
     }
 
     /**
-     * 获取歌单列表<br>
-     *
-     * @return 歌曲id
+     * 生成请求参数
+     * @param url
+     * @return
      */
-    ///////////////////////////////////////////////////////////////////////////
-    //
-    //   {
-    //     "offset": offset,
-    //      "limit": limit,
-    //      "uid": uid
-    //   }
-    ///////////////////////////////////////////////////////////////////////////
-//    public static  Set<Integer> getPlayList(Integer listId){
-//        JSONObject jsonObjecta = new JSONObject();
-//        jsonObjecta.put("limit", 100);
-//        jsonObjecta.put("offset", 0);
-//        jsonObjecta.put("uid", listId);
-//        JSONObject jsonObject = spiderMetMusic("http://music.163.com/api/playlist/detail?id="+listId,jsonObjecta);
-//        Set<Integer> list = new HashSet<>();
-//        if (jsonObject.getInteger("code")==200) {
-//            JSONObject result = jsonObject.getJSONObject("result");
-//            JSONArray tracks = result.getJSONArray("tracks");
-//            tracks.forEach(index->{
-//                JSONObject object = (JSONObject) index;
-//                list.add(object.getInteger("id"));
-//            });
-//        }
-//        return list;
-//    }
+    private static Map<String,String> generatePara(String url){
+        JSONObject para = new JSONObject();
+        if(url.contains("comments/R_SO_4_")){
+            para.put("limit", 20);
+            para.put("offset", 0);
+            para.put("total", true);
+            para.put("rid", "R_SO_4_436487056");
+
+        }else if(url.contains("play/record")){
+            para.put("limit", 1000);
+            para.put("offset", 0);
+            para.put("total", true);
+            para.put("uid", 424641929);
+            para.put("type", -1);
+        }
+
+        return EncryptTools.encryptedRequest(para);
+    }
+
 
 
     /**
-     * 获取歌曲信息<br>
-     * {"id": id}
-     *
-     * @param songId
+     * 测试使用
+     * @param
      * @return
      */
-    public JSONObject getSong(Integer songId) {
-        if (songId == null) {
-            return null;
-        }
-        JSONObject jsonObject = spiderMetMusic("http://music.163.com/weapi/v1/resource/comments/R_SO_4_" + songId + "?csrf_token=");
-        return jsonObject;
+    @Deprecated
+    public void getSong() {
+        JSONObject para = new JSONObject();
+//        参数
+        para.put("limit", 20);
+        para.put("offset", 0);
+        para.put("total", true);
+        para.put("rid", "R_SO_4_436487056");
+
+        Map<String, String> stringStringMap = EncryptTools.encryptedRequest(para);
+
+    test("http://music.163.com/weapi/v1/resource/comments/R_SO_4_" +436487056 + "?csrf_token=",stringStringMap);
     }
 
     /**
-     * 获取用户歌单
-     *
-     * http://music.163.com/weapi/v1/play/record?csrf_token=
-     *
-     * @param userId
+     * 测试使用
+     * @param
+     * @return
      */
-    public void getUserPlayList(Integer userId) {
+    @Deprecated
+    public void getUserPlayList() {
+        JSONObject para = new JSONObject();
+//        参数
+        para.put("limit", 1000);
+        para.put("offset", 0);
+        para.put("total", true);
+        para.put("uid", 424641929);
+        para.put("type", -1);
+        Map<String, String> stringStringMap = EncryptTools.encryptedRequest(para);
 
+        test("http://music.163.com/weapi/v1/play/record?csrf_token=", stringStringMap);
+    }
+
+    /**
+     * 测试使用
+     * @param
+     * @return
+     */
+    @Deprecated
+    public static void test(String url,Map<String,String> map){
+
+        HttpClientBuilder builder = HttpClientBuilder.create();
+        CloseableHttpClient build = builder.build();
+        RequestBuilder post = RequestBuilder.post(url);
+
+        post.addHeader("Referer", "http://music.163.com/")
+                .addHeader("Host", "music.163.com")
+                .addHeader("User-Agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36")
+                .addHeader("Accept", "*/*")
+                .addHeader("Accept-Encoding", "gzip, deflate");
+
+        post.addParameter("params", map.get("params"))
+                .addParameter("encSecKey", map.get("encSecKey"));
+
+        RequestConfig.Builder config = RequestConfig.custom().setConnectionRequestTimeout(5000)
+                .setSocketTimeout(5000)
+                .setConnectTimeout(5000)
+                .setCookieSpec(CookieSpecs.STANDARD).setProxy(new HttpHost("127.0.0.1",1080));
+        post.setConfig(config.build());
+
+        HttpUriRequest build1 = post.build();
+        HttpResponse execute = null;
+        byte[] bytes = new byte[0];
+        try {
+            execute = build.execute(build1);
+            InputStream content = execute.getEntity().getContent();
+            bytes = IOUtils.toByteArray(content);
+        } catch (IOException e) {
+            LOGGER.info("Catch IOException and remove ip from ipPools");
+        } finally {
+            if (execute != null) {
+                EntityUtils.consumeQuietly(execute.getEntity());
+            }
+        }
+        String s = new String(bytes);
+        System.out.println(s);
     }
 
 

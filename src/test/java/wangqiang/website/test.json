@@ -1,0 +1,781 @@
+{//获取用户id
+  "isMusician": false,
+  "userId": -1,
+  "topComments": [],
+  "moreHot": true,
+  "hotComments": [
+    {
+      "user": {
+        "locationInfo": null,
+        "remarkName": null,
+        "avatarUrl": "http://p1.music.126.net/QiR2eIUN-6tM63k2WoNTqg==/19005058486226010.jpg",
+        "authStatus": 1,
+        "userId": 58777669,
+        "vipType": 11,
+        "nickname": "iPhone7",
+        "userType": 4,
+        "expertTags": null
+      },
+      "beReplied": [],
+      "likedCount": 1100,
+      "liked": false,
+      "commentId": 391173295,
+      "time": 1495587243073,
+      "content": "清新活力的嗓音，\n歌曲分为前后快慢两版，柔情与活泼兼具。\n前半部分，如夕阳，暖意倒流心底；\n后半部分，犹初阳，光芒四射。\n将“邱莹莹”化为歌名，\n透过形象的歌词与杨紫的演唱，\n人物个性在歌曲中一览无余。\n或许我们每个人身体里都存在着“邱莹莹”，\n像雨后春笋般清新。"
+    },
+    {
+      "user": {
+        "locationInfo": null,
+        "remarkName": null,
+        "avatarUrl": "http://p1.music.126.net/0hFpeZ0Y50tsBIW39kojMg==/1420569030307080.jpg",
+        "authStatus": 0,
+        "userId": 136423149,
+        "vipType": 0,
+        "nickname": "狗蛋和二妞",
+        "userType": 0,
+        "expertTags": null
+      },
+      "beReplied": [],
+      "likedCount": 1018,
+      "liked": false,
+      "commentId": 391400378,
+      "time": 1495609455290,
+      "content": "之前的26年，我是个乖儿子，上好的大学，别人口中衣食无忧的部队军官，半年前我申请退伍，所有人反对我，包括滴滴司机，过程好难熬好孤独，跑跑颠颠，去了深圳，来到上海。以后的日子里，我想自己好好活，学吉他唱民谣，认真装修租来的房子，好好养一条狗，不敢丢了梦想，但愿以后的日子越来越有意思。"
+    },
+    {
+      "user": {
+        "locationInfo": null,
+        "remarkName": null,
+        "avatarUrl": "http://p1.music.126.net/Ddmd0WKSC2kBtRcAi4G2ew==/19098516974582055.jpg",
+        "authStatus": 0,
+        "userId": 103509706,
+        "vipType": 0,
+        "nickname": "笛中笙歌",
+        "userType": 0,
+        "expertTags": null
+      },
+      "beReplied": [],
+      "likedCount": 910,
+      "liked": false,
+      "commentId": 391202725,
+      "time": 1495591829622,
+      "content": "莹莹活得直白、简单，平时对待生活也是积极向上，阳光乐观。就是每次一失恋就会脑袋进水。这也和她的性格有直接关系，那样一个没有心机的姑娘，对她来说恋爱大于天。希望莹莹快快好起来，还是那个勇往直前又充满希望的小蚯蚓。"
+    },
+    {
+      "user": {
+        "locationInfo": null,
+        "remarkName": null,
+        "avatarUrl": "http://p1.music.126.net/ZxGJcwlzsmu-R2iuBqTYCQ==/109951162928986398.jpg",
+        "authStatus": 0,
+        "userId": 68796658,
+        "vipType": 0,
+        "nickname": "微软CEO比尔盖茨",
+        "userType": 0,
+        "expertTags": null
+      },
+      "beReplied": [],
+      "likedCount": 814,
+      "liked": false,
+      "commentId": 391240350,
+      "time": 1495595384785,
+      "content": "邱莹莹 一个来自小城市的平凡姑也连累别人不得安生。父母从农村来到城市，一心盼望她在大城市站稳脚跟，可没有才能也没有美貌，平凡的她在海市过得 举步维艰。不过杂草也有杂草的生存方式：为了爱情委曲求全，为了工作拼尽全力。这样的人生或许不够精彩，但谁又能说，这不是生活最常见的姿态。"
+    },
+    {
+      "user": {
+        "locationInfo": null,
+        "remarkName": null,
+        "avatarUrl": "http://p1.music.126.net/Vo0jxyU1EQu9kSE6JQjtgg==/109951162852166882.jpg",
+        "authStatus": 0,
+        "userId": 335792899,
+        "vipType": 0,
+        "nickname": "许我一个雷子_",
+        "userType": 0,
+        "expertTags": null
+      },
+      "beReplied": [],
+      "likedCount": 784,
+      "liked": false,
+      "commentId": 391261695,
+      "time": 1495598494633,
+      "content": "演技真的是一路飙升呢我们的杨紫。    ❤️失恋哭的真是让人心疼。[心碎] 看到了自己的影子。其实我们好多人都跟她一样化茧成蝶不是我们的命 我们都有一颗勇敢的心。    如果你来了的话 别再走了好吗？"
+    },
+    {
+      "user": {
+        "locationInfo": null,
+        "remarkName": null,
+        "avatarUrl": "http://p1.music.126.net/-FPgVyJ8ZuD2p8f6AwkDvw==/19145795974557333.jpg",
+        "authStatus": 0,
+        "userId": 329668472,
+        "vipType": 0,
+        "nickname": "凉cool葭",
+        "userType": 0,
+        "expertTags": null
+      },
+      "beReplied": [],
+      "likedCount": 506,
+      "liked": false,
+      "commentId": 391184109,
+      "time": 1495587813207,
+      "content": "莹莹，真不希望看到你失恋。心疼死了[流泪]"
+    },
+    {
+      "user": {
+        "locationInfo": null,
+        "remarkName": null,
+        "avatarUrl": "http://p1.music.126.net/zZ-KEIY1O8e1FQhrXpgABw==/18969874114169019.jpg",
+        "authStatus": 0,
+        "userId": 109165786,
+        "vipType": 0,
+        "nickname": "-小牛奶",
+        "userType": 0,
+        "expertTags": null
+      },
+      "beReplied": [],
+      "likedCount": 493,
+      "liked": false,
+      "commentId": 391383356,
+      "time": 1495607379239,
+      "content": "看到小邱在车站买票生病应勤去接她那里，在车上应勤喂她那一段，那种又委屈又感动又小心翼翼的样子，一下子就跟着她哭了"
+    },
+    {
+      "user": {
+        "locationInfo": null,
+        "remarkName": null,
+        "avatarUrl": "http://p1.music.126.net/ICBDqoNd_Tb8GLRasVjCNA==/1382086130025232.jpg",
+        "authStatus": 0,
+        "userId": 315817713,
+        "vipType": 0,
+        "nickname": "Paul266",
+        "userType": 0,
+        "expertTags": null
+      },
+      "beReplied": [],
+      "likedCount": 355,
+      "liked": false,
+      "commentId": 392021492,
+      "time": 1495631315144,
+      "content": "我们都羡慕曲筱绡，梦想做安迪，但是现实是我们都要像关雎尔一样努力拼命，实际上我们都是傻的和邱莹莹一样……最后被生活逼成了樊胜美。"
+    },
+    {
+      "user": {
+        "locationInfo": null,
+        "remarkName": null,
+        "avatarUrl": "http://p1.music.126.net/QbzIOhKfshP1PmRsC43yTA==/109951162876111513.jpg",
+        "authStatus": 0,
+        "userId": 44010249,
+        "vipType": 0,
+        "nickname": "清减半夏时光",
+        "userType": 0,
+        "expertTags": [
+          "轻音乐",
+          "欧美"
+        ]
+      },
+      "beReplied": [],
+      "likedCount": 350,
+      "liked": false,
+      "commentId": 391139745,
+      "time": 1495584374760,
+      "content": "寂寞的蚯蚓，在潮湿的泥土里躲避\r柔弱的蚯蚓，在雨后的泥土里勇敢坚定"
+    },
+    {
+      "user": {
+        "locationInfo": null,
+        "remarkName": null,
+        "avatarUrl": "http://p1.music.126.net/7GCfVV-GYbscSzd6nwjOrA==/18704891813371327.jpg",
+        "authStatus": 0,
+        "userId": 381824481,
+        "vipType": 10,
+        "nickname": "绝世天魔",
+        "userType": 0,
+        "expertTags": null
+      },
+      "beReplied": [],
+      "likedCount": 323,
+      "liked": false,
+      "commentId": 391181447,
+      "time": 1495588965871,
+      "content": "我的小蚯蚓来了   这好像是我第一次听杨紫唱歌呐     莹莹这个角色我很喜欢"
+    },
+    {
+      "user": {
+        "locationInfo": null,
+        "remarkName": null,
+        "avatarUrl": "http://p1.music.126.net/ACgJs71_25eIKRZgrZyL6w==/109951162854298644.jpg",
+        "authStatus": 0,
+        "userId": 55600149,
+        "vipType": 0,
+        "nickname": "NoCig",
+        "userType": 0,
+        "expertTags": null
+      },
+      "beReplied": [],
+      "likedCount": 274,
+      "liked": false,
+      "commentId": 392058769,
+      "time": 1495633928342,
+      "content": "蚓无爪牙之力，筋骨之强，上食埃土，下饮黄泉，用心一也。"
+    },
+    {
+      "user": {
+        "locationInfo": null,
+        "remarkName": null,
+        "avatarUrl": "http://p1.music.126.net/kR0fUi_Nkblnrw4vpAhYWA==/19046839928109770.jpg",
+        "authStatus": 0,
+        "userId": 410348200,
+        "vipType": 0,
+        "nickname": "执子涵与",
+        "userType": 0,
+        "expertTags": null
+      },
+      "beReplied": [],
+      "likedCount": 250,
+      "liked": false,
+      "commentId": 391977537,
+      "time": 1495628523797,
+      "content": "搞不懂，邱莹莹为什么放不下应勤。就像关关说的，如果一个人和我相处那么久却依旧不了解我的为人，只凭曾经的过失而直接将我否定，我会放弃这个人。更何况那么快又找了女朋友。我不懂她在坚持什么，或许，我和她的区别就是，她是个恋爱大于天的女孩吧，心疼她。"
+    },
+    {
+      "user": {
+        "locationInfo": null,
+        "remarkName": null,
+        "avatarUrl": "http://p1.music.126.net/usLrS5pzWV7QbFejfI0PMg==/109951162934198438.jpg",
+        "authStatus": 0,
+        "userId": 131509403,
+        "vipType": 0,
+        "nickname": "Bewatermygirl",
+        "userType": 0,
+        "expertTags": null
+      },
+      "beReplied": [],
+      "likedCount": 106,
+      "liked": false,
+      "commentId": 392152474,
+      "time": 1495638077703,
+      "content": "卧槽 开头几个音以为是city of stars"
+    },
+    {
+      "user": {
+        "locationInfo": null,
+        "remarkName": null,
+        "avatarUrl": "http://p1.music.126.net/Xs_ID5YDBJ1NMbHVh_MdiA==/3273246122969688.jpg",
+        "authStatus": 0,
+        "userId": 112070673,
+        "vipType": 0,
+        "nickname": "metaline",
+        "userType": 0,
+        "expertTags": null
+      },
+      "beReplied": [],
+      "likedCount": 48,
+      "liked": false,
+      "commentId": 392300933,
+      "time": 1495651225929,
+      "content": "为什么那么多人讨厌邱莹莹这个角色？我就很喜欢很有共鸣，自己也跟她一样曾经有太过相似的经历，她的难受戳到我心里，几次都跟着哭了，仿佛把我拉回了那段痛苦的经历，每个人活得不一样，你没经历过只觉得她要死要活，可是你从没看到她的真实矛盾可爱，我还是那句话，任何人没有资格去评判任何人的活法"
+    },
+    {
+      "user": {
+        "locationInfo": null,
+        "remarkName": null,
+        "avatarUrl": "http://p1.music.126.net/zrAqB0R2MD60NhjN-GGecw==/3446968963154116.jpg",
+        "authStatus": 0,
+        "userId": 322895565,
+        "vipType": 0,
+        "nickname": "巷尾韩大爷的老友",
+        "userType": 0,
+        "expertTags": null
+      },
+      "beReplied": [],
+      "likedCount": 43,
+      "liked": false,
+      "commentId": 392280101,
+      "time": 1495644754877,
+      "content": "她喜欢杨紫，头像空间相册都是她，虽然我很少和她聊天，但是我为了了解她，就去喜欢喜欢她喜欢的，到了现在我已经成为杨紫的忠实粉丝，而她只是个假粉丝，就不喜欢她了[大哭]"
+    }
+  ],
+  "code": 200,
+  "comments": [
+    {
+      "user": {
+        "locationInfo": null,
+        "remarkName": null,
+        "avatarUrl": "http://p1.music.126.net/kFNzWXouMVgLQDCgX4rvRg==/18586144557837734.jpg",
+        "authStatus": 0,
+        "userId": 96220806,
+        "vipType": 0,
+        "nickname": "梦的深更是醒",
+        "userType": 0,
+        "expertTags": null
+      },
+      "beReplied": [],
+      "likedCount": 0,
+      "liked": false,
+      "commentId": 392659812,
+      "time": 1495702390201,
+      "content": "不喜欢邱莹莹，可我又像极了她 没头没脑[心碎]",
+      "isRemoveHotComment": false
+    },
+    {
+      "user": {
+        "locationInfo": null,
+        "remarkName": null,
+        "avatarUrl": "http://p1.music.126.net/wKzD2mW1KPfAgwxeX4UiDQ==/1408474398993247.jpg",
+        "authStatus": 0,
+        "userId": 137713202,
+        "vipType": 0,
+        "nickname": "玉面老飞猴",
+        "userType": 0,
+        "expertTags": null
+      },
+      "beReplied": [
+        {
+          "user": {
+            "locationInfo": null,
+            "remarkName": null,
+            "avatarUrl": "http://p1.music.126.net/usLrS5pzWV7QbFejfI0PMg==/109951162934198438.jpg",
+            "authStatus": 0,
+            "userId": 131509403,
+            "vipType": 0,
+            "nickname": "Bewatermygirl",
+            "userType": 0,
+            "expertTags": null
+          },
+          "content": "卧槽 开头几个音以为是city of stars",
+          "status": 0
+        }
+      ],
+      "likedCount": 0,
+      "liked": false,
+      "commentId": 392680608,
+      "time": 1495702305590,
+      "content": "我也是！！！！！",
+      "isRemoveHotComment": false
+    },
+    {
+      "user": {
+        "locationInfo": null,
+        "remarkName": null,
+        "avatarUrl": "http://p1.music.126.net/Q1da-xenzU5SKFkKxe0OvA==/18786255673549434.jpg",
+        "authStatus": 0,
+        "userId": 102755227,
+        "vipType": 0,
+        "nickname": "萌beeee",
+        "userType": 0,
+        "expertTags": null
+      },
+      "beReplied": [
+        {
+          "user": {
+            "locationInfo": null,
+            "remarkName": null,
+            "avatarUrl": "http://p1.music.126.net/usLrS5pzWV7QbFejfI0PMg==/109951162934198438.jpg",
+            "authStatus": 0,
+            "userId": 131509403,
+            "vipType": 0,
+            "nickname": "Bewatermygirl",
+            "userType": 0,
+            "expertTags": null
+          },
+          "content": "卧槽 开头几个音以为是city of stars",
+          "status": 0
+        }
+      ],
+      "likedCount": 0,
+      "liked": false,
+      "commentId": 392660689,
+      "time": 1495702097026,
+      "content": "重新编曲后的→把耳朵叫醒by金海心",
+      "isRemoveHotComment": false
+    },
+    {
+      "user": {
+        "locationInfo": null,
+        "remarkName": null,
+        "avatarUrl": "http://p1.music.126.net/Bj-2dpSuYWvuRe90zVlf9g==/1365593500375130.jpg",
+        "authStatus": 0,
+        "userId": 248347136,
+        "vipType": 0,
+        "nickname": "我渴望见你一面",
+        "userType": 0,
+        "expertTags": null
+      },
+      "beReplied": [],
+      "likedCount": 0,
+      "liked": false,
+      "commentId": 392660645,
+      "time": 1495702000850,
+      "content": "邱莹莹这个角色，在我心里，就是我自己，在看到车站那一幕应勤找到她的时候，不争气地哭了，生活中我也遇到过这样在路边痛成狗的时候，但是我没有她幸运，有个打个电话就为我狂奔而来的人，即使当时我很想打那个电话，但是我不能，因为我知道他不喜欢我，我不知道不确信他会不会来。",
+      "isRemoveHotComment": false
+    },
+    {
+      "user": {
+        "locationInfo": null,
+        "remarkName": null,
+        "avatarUrl": "http://p1.music.126.net/FSunX3V5_SbYplLBbST-LA==/8002245628231564.jpg",
+        "authStatus": 0,
+        "userId": 70983675,
+        "vipType": 0,
+        "nickname": "小鱼叫33",
+        "userType": 0,
+        "expertTags": null
+      },
+      "beReplied": [
+        {
+          "user": {
+            "locationInfo": null,
+            "remarkName": null,
+            "avatarUrl": "http://p1.music.126.net/PBXpNrQU5xHFetLcGUtUmQ==/18788454697207851.jpg",
+            "authStatus": 0,
+            "userId": 365726938,
+            "vipType": 0,
+            "nickname": "Ms锦瑟",
+            "userType": 0,
+            "expertTags": null
+          },
+          "content": "前奏既视感爱乐之城呀[呆]",
+          "status": 0
+        }
+      ],
+      "likedCount": 0,
+      "liked": false,
+      "commentId": 392660621,
+      "time": 1495701935712,
+      "content": "同感！",
+      "isRemoveHotComment": false
+    },
+    {
+      "user": {
+        "locationInfo": null,
+        "remarkName": null,
+        "avatarUrl": "http://p1.music.126.net/PBXpNrQU5xHFetLcGUtUmQ==/18788454697207851.jpg",
+        "authStatus": 0,
+        "userId": 365726938,
+        "vipType": 0,
+        "nickname": "Ms锦瑟",
+        "userType": 0,
+        "expertTags": null
+      },
+      "beReplied": [],
+      "likedCount": 1,
+      "liked": false,
+      "commentId": 392681347,
+      "time": 1495701734719,
+      "content": "前奏既视感爱乐之城呀[呆]",
+      "isRemoveHotComment": false
+    },
+    {
+      "user": {
+        "locationInfo": null,
+        "remarkName": null,
+        "avatarUrl": "http://p1.music.126.net/PBXpNrQU5xHFetLcGUtUmQ==/18788454697207851.jpg",
+        "authStatus": 0,
+        "userId": 365726938,
+        "vipType": 0,
+        "nickname": "Ms锦瑟",
+        "userType": 0,
+        "expertTags": null
+      },
+      "beReplied": [
+        {
+          "user": {
+            "locationInfo": null,
+            "remarkName": null,
+            "avatarUrl": "http://p1.music.126.net/QiR2eIUN-6tM63k2WoNTqg==/19005058486226010.jpg",
+            "authStatus": 1,
+            "userId": 58777669,
+            "vipType": 11,
+            "nickname": "iPhone7",
+            "userType": 4,
+            "expertTags": null
+          },
+          "content": "清新活力的嗓音，\n歌曲分为前后快慢两版，柔情与活泼兼具。\n前半部分，如夕阳，暖意倒流心底；\n后半部分，犹初阳，光芒四射。\n将“邱莹莹”化为歌名，\n透过形象的歌词与杨紫的演唱，\n人物个性在歌曲中一览无余。\n或许我们每个人身体里都存在着“邱莹莹”，\n像雨后春笋般清新。",
+          "status": 0
+        }
+      ],
+      "likedCount": 0,
+      "liked": false,
+      "commentId": 392673420,
+      "time": 1495701658566,
+      "content": "写的真美！",
+      "isRemoveHotComment": false
+    },
+    {
+      "user": {
+        "locationInfo": null,
+        "remarkName": null,
+        "avatarUrl": "http://p1.music.126.net/VnZiScyynLG7atLIZ2YPkw==/18686200114669622.jpg",
+        "authStatus": 0,
+        "userId": 117902608,
+        "vipType": 0,
+        "nickname": "青山彡",
+        "userType": 0,
+        "expertTags": null
+      },
+      "beReplied": [],
+      "likedCount": 0,
+      "liked": false,
+      "commentId": 392663475,
+      "time": 1495701605156,
+      "content": "董冬冬是谁啊？这个人这么有才",
+      "isRemoveHotComment": false
+    },
+    {
+      "user": {
+        "locationInfo": null,
+        "remarkName": null,
+        "avatarUrl": "http://p1.music.126.net/sRpbr9VVKyzVh-uLPpAxsw==/18528969953203993.jpg",
+        "authStatus": 0,
+        "userId": 407328944,
+        "vipType": 0,
+        "nickname": "偏执狂的鬼神",
+        "userType": 0,
+        "expertTags": null
+      },
+      "beReplied": [],
+      "likedCount": 0,
+      "liked": false,
+      "commentId": 392677320,
+      "time": 1495701581919,
+      "content": "邱莹莹是多少人的缩影",
+      "isRemoveHotComment": false
+    },
+    {
+      "user": {
+        "locationInfo": null,
+        "remarkName": null,
+        "avatarUrl": "http://p1.music.126.net/df5u28bMvRyyqUi2GjOnkA==/18811544439912666.jpg",
+        "authStatus": 0,
+        "userId": 257911655,
+        "vipType": 0,
+        "nickname": "野蛮生长888",
+        "userType": 0,
+        "expertTags": null
+      },
+      "beReplied": [],
+      "likedCount": 0,
+      "liked": false,
+      "commentId": 392669396,
+      "time": 1495701500352,
+      "content": "拿得起放得下说起来容易，一个人闯进你的生活，然后你用尽全身力气去爱，结果那个人就这么从你生活中抽离，大部分不会做得比小蚯蚓好，但是我还是希望妹子们都好好，遇到了对的人就好好生活，没遇到就一个人潇潇洒洒的生活，毕竟生活不是小说，不敢保证给你 一个完美的结局，不要像现在的小蚯蚓这样。",
+      "isRemoveHotComment": false
+    },
+    {
+      "user": {
+        "locationInfo": null,
+        "remarkName": null,
+        "avatarUrl": "http://p1.music.126.net/ii4JjLmm57r-fqhp8SWpKw==/3426078254334805.jpg",
+        "authStatus": 0,
+        "userId": 19089150,
+        "vipType": 0,
+        "nickname": "竟是-没有情绪",
+        "userType": 0,
+        "expertTags": null
+      },
+      "beReplied": [],
+      "likedCount": 0,
+      "liked": false,
+      "commentId": 392680296,
+      "time": 1495701402960,
+      "content": "[爱心]",
+      "isRemoveHotComment": false
+    },
+    {
+      "user": {
+        "locationInfo": null,
+        "remarkName": null,
+        "avatarUrl": "http://p1.music.126.net/3KxRe92WmsMIf3kcpFv1LQ==/18679603046786669.jpg",
+        "authStatus": 0,
+        "userId": 400102538,
+        "vipType": 0,
+        "nickname": "一杯清茶Martina",
+        "userType": 0,
+        "expertTags": null
+      },
+      "beReplied": [],
+      "likedCount": 2,
+      "liked": false,
+      "commentId": 392669341,
+      "time": 1495701344864,
+      "content": "杨紫的声音好好听",
+      "isRemoveHotComment": false
+    },
+    {
+      "user": {
+        "locationInfo": null,
+        "remarkName": null,
+        "avatarUrl": "http://p1.music.126.net/VnZiScyynLG7atLIZ2YPkw==/18686200114669622.jpg",
+        "authStatus": 0,
+        "userId": 491300629,
+        "vipType": 0,
+        "nickname": "风过竹间",
+        "userType": 0,
+        "expertTags": null
+      },
+      "beReplied": [],
+      "likedCount": 1,
+      "liked": false,
+      "commentId": 392663362,
+      "time": 1495701297449,
+      "content": "我真不明白很多说这哭那哭的，有这么好哭吗",
+      "isRemoveHotComment": false
+    },
+    {
+      "user": {
+        "locationInfo": null,
+        "remarkName": null,
+        "avatarUrl": "http://p1.music.126.net/B4Z2ayrEStO7jkkRQ1mGeA==/19056735532629674.jpg",
+        "authStatus": 0,
+        "userId": 433833306,
+        "vipType": 0,
+        "nickname": "HTJ12138",
+        "userType": 0,
+        "expertTags": null
+      },
+      "beReplied": [
+        {
+          "user": {
+            "locationInfo": null,
+            "remarkName": null,
+            "avatarUrl": "http://p1.music.126.net/0hFpeZ0Y50tsBIW39kojMg==/1420569030307080.jpg",
+            "authStatus": 0,
+            "userId": 136423149,
+            "vipType": 0,
+            "nickname": "狗蛋和二妞",
+            "userType": 0,
+            "expertTags": null
+          },
+          "content": "之前的26年，我是个乖儿子，上好的大学，别人口中衣食无忧的部队军官，半年前我申请退伍，所有人反对我，包括滴滴司机，过程好难熬好孤独，跑跑颠颠，去了深圳，来到上海。以后的日子里，我想自己好好活，学吉他唱民谣，认真装修租来的房子，好好养一条狗，不敢丢了梦想，但愿以后的日子越来越有意思。",
+          "status": 0
+        }
+      ],
+      "likedCount": 0,
+      "liked": false,
+      "commentId": 392656494,
+      "time": 1495701276543,
+      "content": "加油",
+      "isRemoveHotComment": false
+    },
+    {
+      "user": {
+        "locationInfo": null,
+        "remarkName": null,
+        "avatarUrl": "http://p1.music.126.net/VnZiScyynLG7atLIZ2YPkw==/18686200114669622.jpg",
+        "authStatus": 0,
+        "userId": 362105935,
+        "vipType": 0,
+        "nickname": "SS小朋友",
+        "userType": 0,
+        "expertTags": null
+      },
+      "beReplied": [],
+      "likedCount": 0,
+      "liked": false,
+      "commentId": 392681063,
+      "time": 1495700944671,
+      "content": "评论了他人，看了他人评论了他人，之后，就接着弄好自己的生活，方不负生活，不负爱情，不负痛，不负幸福，不负悲伤，不负或小或大的理想。",
+      "isRemoveHotComment": false
+    },
+    {
+      "user": {
+        "locationInfo": null,
+        "remarkName": null,
+        "avatarUrl": "http://p1.music.126.net/34CNntzfvSb5VA6FdKvV3A==/18512477278716335.jpg",
+        "authStatus": 0,
+        "userId": 279039565,
+        "vipType": 0,
+        "nickname": "葱包侩儿",
+        "userType": 0,
+        "expertTags": null
+      },
+      "beReplied": [],
+      "likedCount": 0,
+      "liked": false,
+      "commentId": 392678100,
+      "time": 1495700930466,
+      "content": "=-=我小学时候居然很喜欢听杨紫唱的歌..那时候 她有翻唱的歌\n莫名的喜欢~",
+      "isRemoveHotComment": false
+    },
+    {
+      "user": {
+        "locationInfo": null,
+        "remarkName": null,
+        "avatarUrl": "http://p1.music.126.net/6QwFWEwAHKqdIlnVOQI0NQ==/18531168976453124.jpg",
+        "authStatus": 0,
+        "userId": 410011449,
+        "vipType": 0,
+        "nickname": "我就吃一口-",
+        "userType": 0,
+        "expertTags": null
+      },
+      "beReplied": [],
+      "likedCount": 0,
+      "liked": false,
+      "commentId": 392682058,
+      "time": 1495700917199,
+      "content": "每次受伤后我还是会一如既往的对爱情充满信心  我还是觉得我怎么对别人  别人也会怎么对我，对朋友 对工作 对爱情",
+      "isRemoveHotComment": false
+    },
+    {
+      "user": {
+        "locationInfo": null,
+        "remarkName": null,
+        "avatarUrl": "http://p1.music.126.net/9v8hMKoZ15mOaDmAvtOeNQ==/1385384653753127.jpg",
+        "authStatus": 0,
+        "userId": 249952467,
+        "vipType": 0,
+        "nickname": "Jojo__Zhou",
+        "userType": 0,
+        "expertTags": null
+      },
+      "beReplied": [],
+      "likedCount": 0,
+      "liked": false,
+      "commentId": 392679070,
+      "time": 1495700848529,
+      "content": "今天中午刚看完应勤找新女朋友，我还不能理解莹莹的痛。结果下午就得知前男友已经找了女朋友，瞬间心好痛。分手一年，每天都会想他，我以为他和我一样，原来只是我以为！",
+      "isRemoveHotComment": false
+    },
+    {
+      "user": {
+        "locationInfo": null,
+        "remarkName": null,
+        "avatarUrl": "http://p1.music.126.net/II8s0UjXU_G5go_3GL9V3A==/3439272384780097.jpg",
+        "authStatus": 0,
+        "userId": 248617833,
+        "vipType": 0,
+        "nickname": "A_dolph",
+        "userType": 0,
+        "expertTags": null
+      },
+      "beReplied": [],
+      "likedCount": 1,
+      "liked": false,
+      "commentId": 392658287,
+      "time": 1495700826375,
+      "content": "歌好听，但不适合我[哀伤]",
+      "isRemoveHotComment": false
+    },
+    {
+      "user": {
+        "locationInfo": null,
+        "remarkName": null,
+        "avatarUrl": "http://p1.music.126.net/9wSDfZZFEYeZbTZp-Y1Wxw==/18785156162426867.jpg",
+        "authStatus": 0,
+        "userId": 101957007,
+        "vipType": 0,
+        "nickname": "半个柠檬123",
+        "userType": 0,
+        "expertTags": null
+      },
+      "beReplied": [],
+      "likedCount": 1,
+      "liked": false,
+      "commentId": 392674021,
+      "time": 1495700612583,
+      "content": "心疼邱莹莹",
+      "isRemoveHotComment": false
+    }
+  ],
+  "total": 2081,
+  "more": true
+}

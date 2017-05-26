@@ -21,7 +21,7 @@ public class EncryptTools {
     private static final String nonce = "0CoJUm6Qyw8W8jud";
 
 
-    public  Map<String, String> encryptedRequest(JSONObject jsonObject) {
+    public static Map<String, String> encryptedRequest(JSONObject jsonObject) {
         Map<String, String> returnMap = new HashMap<>();
         String str = jsonObject.toString();
         String secretKey = createSecretKey(16);
@@ -86,7 +86,7 @@ public class EncryptTools {
      *
      * @return
      */
-    private String createSecretKey(int size) {
+    private static String createSecretKey(int size) {
         String keys = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
         String key = "";
         for (int i = 0; i < size; i++) {

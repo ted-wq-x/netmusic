@@ -58,11 +58,12 @@ public class InitListener implements ApplicationListener<ApplicationReadyEvent> 
         LOGGER.info("Exit onApplicationEvent method.");
     }
 
-
+    @Deprecated
     private int getCurrentNum() {
         return musicRepository.selectMax() + 1;
     }
 
+    @Deprecated
     private void main() {
         LOGGER.info("Enter spider main method");
         while (true) {
@@ -81,6 +82,11 @@ public class InitListener implements ApplicationListener<ApplicationReadyEvent> 
             service.submit(new task(andIncrement));
         }
         LOGGER.info("Exit spider main method");
+    }
+
+
+    private void generateTask(){
+
     }
 
     /**

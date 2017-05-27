@@ -38,7 +38,7 @@ public class SpiderMusic {
     @Autowired
     private MusicRepository musicRepository;
 
-    private ExecutorService executorService = Executors.newFixedThreadPool(Runtime.getRuntime().availableProcessors() + 1);
+    private ExecutorService executorService = Executors.newFixedThreadPool((Runtime.getRuntime().availableProcessors() + 1)*2);
 
 
     public void startThisSpider() {
@@ -54,6 +54,7 @@ public class SpiderMusic {
      * song数据的爬取，使用的是线程池
      */
     private void songSpiderThread(){
+        Thread.currentThread().setName("song-spider-main");
         while (true) {
             Spider spider = new SongSpider();
             try {
@@ -73,6 +74,7 @@ public class SpiderMusic {
      */
     private void userSpiderThread() {
         LOGGER.info("Enter userSpiderThread method");
+        Thread.currentThread().setName("user-spider-main");
         Spider userSpider = new UserSpider();
         while (true) {
             JSONObject paras = new JSONObject();
@@ -95,6 +97,7 @@ public class SpiderMusic {
      */
     private void complateTask() {
         LOGGER.info("Enter spider complateTask method");
+        Thread.currentThread().setName("complateTask-main");
         while (true) {
             if (SongSpider.blockingQueueComments.size() >= 100) {
                 LOGGER.info("do spider complateTask method and insert commentsVo");

@@ -17,6 +17,7 @@ import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.nio.charset.Charset;
 import java.util.Map;
 
 /**
@@ -129,10 +130,10 @@ public class SpiderUtils {
         }
         String s = new String(bytes);
 
-        System.out.println(JSONObject.parse(s));
+        System.out.println(s);
     }
 
-    /**
+    /**s
      * 测试使用
      *
      * @param

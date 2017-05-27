@@ -10,11 +10,17 @@ import us.codecraft.webmagic.Site;
 import us.codecraft.webmagic.Spider;
 import us.codecraft.webmagic.processor.PageProcessor;
 import us.codecraft.webmagic.selector.Selectable;
+import wangqiang.website.listener.InitListener;
+import wangqiang.website.spider.SongSpider;
 
 import javax.annotation.PostConstruct;
+import java.net.Inet4Address;
+import java.net.InetAddress;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 /**
  * Created by wangq on 2017/5/16.
@@ -24,8 +30,15 @@ public class ProxyPool {
     private static final Logger LOGGER = LoggerFactory.getLogger(ProxyPool.class);
     private static List<HttpHost> ipPool = Collections.synchronizedList(new ArrayList<>());
 
+    private static ExecutorService executorService;
+
 
     public static HttpHost getHost() {
+        //防止启动时出现超出三次爬取的情况,因为只会第一次单线程使用，所以不会出现并发问题
+        if (InitListener.useLocalIp) {
+            InitListener.useLocalIp = false;
+            return new HttpHost("127.0.0.1",1080);
+        }
         int size = ipPool.size();
         if (size == 1) {
             return null;
@@ -96,7 +109,7 @@ public class ProxyPool {
                 HttpHost host = new HttpHost(ips.get(i), Integer.parseInt(ports.get(i)));
                 ipPool.add(host);
             }
-        }).thread(4).run();
+        }).setExecutorService(executorService).run();
 
         LOGGER.info("Exit getIpPool timer.poolSize={}", ipPool.size());
     }
@@ -115,6 +128,7 @@ public class ProxyPool {
 
     @PostConstruct
     private void initPool() {
+        executorService=Executors.newFixedThreadPool(4);
         getIpsFrom();
     }
 }

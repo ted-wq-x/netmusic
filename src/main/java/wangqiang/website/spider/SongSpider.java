@@ -8,7 +8,6 @@ import wangqiang.website.modal.CommentsVo;
 import wangqiang.website.modal.MusicVo;
 import wangqiang.website.modal.UserVo;
 
-import javax.annotation.PostConstruct;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.BlockingQueue;
@@ -92,6 +91,7 @@ public class SongSpider extends Spider {
             commentsVo.setId(comment.getInteger("commentId"));
             commentsVo.setTime(comment.getInteger("time"));
             commentsVo.setContent(comment.getString("content"));
+            commentsVo.setLikedCount(comment.getInteger("likedCount"));
             commentsVo.setSongId(songId);
             commentsVo.setUserId(userId);
             commentsVos.add(commentsVo);

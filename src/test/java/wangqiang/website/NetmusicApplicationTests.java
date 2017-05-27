@@ -31,10 +31,10 @@ public class NetmusicApplicationTests {
 	@Test
 	public void contextLoads() {
 		CommentsVo commentsVo = new CommentsVo();
-		commentsVo.setId(394043384);
+		commentsVo.setId(1);
 		commentsVo.setUserId(482258385);
 		commentsVo.setTime(1174511619);
-		commentsVo.setSongId(4083399);commentsVo.setContent("初一……\uD83C\uDF1D");
+		commentsVo.setSongId(4083399);commentsVo.setContent("\uD83C\uDF1D初一王强……");
 		commentsRepository.save(commentsVo);
 	}
 

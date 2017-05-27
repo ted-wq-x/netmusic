@@ -2,489 +2,868 @@
   "isMusician": false,
   "userId": -1,
   "topComments": [],
+  "moreHot": true,
+  "hotComments": [
+    {
+      "user": {
+        "locationInfo": null,
+        "expertTags": [
+          "电子",
+          "流行"
+        ],
+        "avatarUrl": "http://p1.music.126.net/dqN2aiaMmImZw07VDJtaug==/7825224255673001.jpg",
+        "authStatus": 0,
+        "remarkName": null,
+        "userId": 45852380,
+        "vipType": 10,
+        "userType": 0,
+        "nickname": "陆维luv_baker"
+      },
+      "beReplied": [],
+      "content": "一天的午夜，地球形成。\n12小时后，在大洋底部，古细胞生物开始蠕动。\n约6亿年前，无脊椎和有脊椎动物降生。约16：48。\n4亿年前出现了两栖类。\n21：36，古生代结束，“恐龙时代”到来。\n这天结束前40分钟，鳞甲目动物几乎绝迹，地上充斥着哺乳动物。\n到了最后四秒才出现人类。\n（山林里的白兔的博客）",
+      "time": 1435404505891,
+      "liked": false,
+      "likedCount": 27805,
+      "commentId": 23920269
+    },
+    {
+      "user": {
+        "locationInfo": null,
+        "expertTags": [
+          "日语",
+          "ACG",
+          "古典"
+        ],
+        "avatarUrl": "http://p1.music.126.net/t2NEaiPV-DhZoo2moTR0kg==/18663110371450265.jpg",
+        "authStatus": 0,
+        "remarkName": null,
+        "userId": 36206155,
+        "vipType": 0,
+        "userType": 0,
+        "nickname": "小如年"
+      },
+      "beReplied": [],
+      "content": "虽已单曲循环了三天,仍然感觉听不够…起初用缓慢忧郁的钢琴做铺垫,勾起听者无限的回忆,而后顺势旋律开始逐渐走向激昂并带有美声形式的腔调继续,仿佛赋予了听者正能量,拨开云雾见到了希望…与其躲在回忆里活过,还不如努力创造新的回忆新的生活!真的是一首很积极向上的纯音乐啊,回忆那段早已听哭",
+      "time": 1413947421730,
+      "liked": false,
+      "likedCount": 17559,
+      "commentId": 5065656
+    },
+    {
+      "user": {
+        "locationInfo": null,
+        "expertTags": null,
+        "avatarUrl": "http://p1.music.126.net/NlhXJzv4j219YX0WqE_IrQ==/18510278254094496.jpg",
+        "authStatus": 0,
+        "remarkName": null,
+        "userId": 47969034,
+        "vipType": 0,
+        "userType": 0,
+        "nickname": "harrif"
+      },
+      "beReplied": [],
+      "content": "每天晚上听音乐的习惯都是给网易惯的毛病",
+      "time": 1422366531450,
+      "liked": false,
+      "likedCount": 12904,
+      "commentId": 9553802
+    },
+    {
+      "user": {
+        "locationInfo": null,
+        "expertTags": null,
+        "avatarUrl": "http://p1.music.126.net/07nJI5rVZPsr0Wonlv2xXA==/2113261348597122.jpg",
+        "authStatus": 0,
+        "remarkName": null,
+        "userId": 47423665,
+        "vipType": 0,
+        "userType": 0,
+        "nickname": "以情伤人1413021963"
+      },
+      "beReplied": [],
+      "content": "世界之隙。我理解为光明即将来临，黑暗弥留。开篇的柔和的钢琴，就像是黑夜带给人的哀怨，慢慢随着光明的来临而消失，中间的那段金属敲击，感觉就像是东方的启明星，然后越来越激昂的人声，美好的未来就在不远处。自我感受，不喜勿喷。谢谢",
+      "time": 1424771826994,
+      "liked": false,
+      "likedCount": 9547,
+      "commentId": 11340467
+    },
+    {
+      "user": {
+        "locationInfo": null,
+        "expertTags": null,
+        "avatarUrl": "http://p1.music.126.net/Tc9Uwqyaq1yEuYzxBnI5gQ==/18701593278366343.jpg",
+        "authStatus": 0,
+        "remarkName": null,
+        "userId": 10591997,
+        "vipType": 0,
+        "userType": 0,
+        "nickname": "黄须润-Syen"
+      },
+      "beReplied": [],
+      "content": "我仿佛在外太空看着整个地球，，",
+      "time": 1422296962738,
+      "liked": false,
+      "likedCount": 6921,
+      "commentId": 9506289
+    },
+    {
+      "user": {
+        "locationInfo": null,
+        "expertTags": null,
+        "avatarUrl": "http://p1.music.126.net/uTFZcpYie06JzyaGNFRxxw==/18731280092557628.jpg",
+        "authStatus": 0,
+        "remarkName": null,
+        "userId": 35735284,
+        "vipType": 0,
+        "userType": 0,
+        "nickname": "ZADIG"
+      },
+      "beReplied": [],
+      "content": "真正好的东西往往就是这样，，平静，简单而充满韵味，朴实无华，回味无穷，隽永而长久",
+      "time": 1423555865059,
+      "liked": false,
+      "likedCount": 5109,
+      "commentId": 10459750
+    },
+    {
+      "user": {
+        "locationInfo": null,
+        "expertTags": null,
+        "avatarUrl": "http://p1.music.126.net/eHajGs-NuKJRi8ciC7WUgA==/109951162918420750.jpg",
+        "authStatus": 0,
+        "remarkName": null,
+        "userId": 42656582,
+        "vipType": 0,
+        "userType": 0,
+        "nickname": "Yolanda_Enigma"
+      },
+      "beReplied": [],
+      "content": "已经24小时不食米水，昨晚做好清肠，早晨五点做好术前准备，换好衣服戴好帽子，躺在单人间病房里慢慢挂糖盐水。\n沉静中有力量。冥冥中有希望。\n很高兴，在手术前听到这首歌。",
+      "time": 1462338265596,
+      "liked": false,
+      "likedCount": 4950,
+      "commentId": 149601630
+    },
+    {
+      "user": {
+        "locationInfo": null,
+        "expertTags": [
+          "日语",
+          "ACG",
+          "古典"
+        ],
+        "avatarUrl": "http://p1.music.126.net/t2NEaiPV-DhZoo2moTR0kg==/18663110371450265.jpg",
+        "authStatus": 0,
+        "remarkName": null,
+        "userId": 36206155,
+        "vipType": 0,
+        "userType": 0,
+        "nickname": "小如年"
+      },
+      "beReplied": [
+        {
+          "user": {
+            "locationInfo": null,
+            "expertTags": null,
+            "avatarUrl": "http://p1.music.126.net/3exJspzJu-LDzAtstLfi1A==/3241360279693022.jpg",
+            "authStatus": 0,
+            "remarkName": null,
+            "userId": 158852,
+            "vipType": 0,
+            "userType": 0,
+            "nickname": "Brokenfuse"
+          },
+          "content": "兄弟，你这话说到我心窝里去了。一席话加上这空灵的音乐彻底点透了我。绝不能再裹足于无限的记忆里了！新的生活就是新的生活",
+          "status": 0
+        }
+      ],
+      "content": "一百个听者有一百种不同的理解,这歌其实还有很多理解为宇宙的浩瀚,自身的渺小等的感觉,这样正好与歌名相符,不过这歌给我感觉更像是正能量,所以我才说了那段话,希望不会误导了大家哈,大家都有自己的理解~ps:放生过去,也放生自己,为了不让日后的自己后悔,努力成为更好的自己,加油![可爱]",
+      "time": 1424532786868,
+      "liked": false,
+      "likedCount": 3955,
+      "commentId": 11183170
+    },
+    {
+      "user": {
+        "locationInfo": null,
+        "expertTags": null,
+        "avatarUrl": "http://p1.music.126.net/jdWChrf_JSHARUyAcHP2mQ==/19219463253682475.jpg",
+        "authStatus": 0,
+        "remarkName": null,
+        "userId": 41002311,
+        "vipType": 0,
+        "userType": 0,
+        "nickname": "时光祭S"
+      },
+      "beReplied": [],
+      "content": "这首音乐值得闭上眼，用心去体会，仰望星空，我们曾经有多么美好的梦想，脚踏实地，回首自己的种种付出，自己又何曾后悔过。",
+      "time": 1423841110072,
+      "liked": false,
+      "likedCount": 3594,
+      "commentId": 10710955
+    },
+    {
+      "user": {
+        "locationInfo": null,
+        "expertTags": null,
+        "avatarUrl": "http://p1.music.126.net/4LeZNXYYeTzAHqEIFjiQaQ==/1426066583712586.jpg",
+        "authStatus": 0,
+        "remarkName": null,
+        "userId": 250687992,
+        "vipType": 0,
+        "userType": 0,
+        "nickname": "呕吧不重要主要看气质"
+      },
+      "beReplied": [],
+      "content": "当你觉得孤独无助时，想一想还有十几亿的细胞只为了你一个人而活",
+      "time": 1458666552465,
+      "liked": false,
+      "likedCount": 3401,
+      "commentId": 132756424
+    },
+    {
+      "user": {
+        "locationInfo": null,
+        "expertTags": null,
+        "avatarUrl": "http://p1.music.126.net/nlb2XAw_iifhJ57VV_J3dA==/18978670207065601.jpg",
+        "authStatus": 0,
+        "remarkName": null,
+        "userId": 65583879,
+        "vipType": 0,
+        "userType": 0,
+        "nickname": "IBMX201i"
+      },
+      "beReplied": [],
+      "content": "十天前左右，我推荐给同学一首what remains of our chalk road 给她听，她听了后说“我也有这个类型的歌”，于是，她给我推荐了between worlds。可三天前，她不幸离世，经历了人间很多美好的事情，也经历了人间最真的痛与不甘。如今不同世界，同一首歌。",
+      "time": 1458998404039,
+      "liked": false,
+      "likedCount": 2317,
+      "commentId": 134414214
+    },
+    {
+      "user": {
+        "locationInfo": null,
+        "expertTags": null,
+        "avatarUrl": "http://p1.music.126.net/rKRYS54QrpUoQRjBLMkbmg==/18821440046192300.jpg",
+        "authStatus": 0,
+        "remarkName": null,
+        "userId": 71567215,
+        "vipType": 0,
+        "userType": 0,
+        "nickname": "一个男孩-"
+      },
+      "beReplied": [],
+      "content": "我拿着剩下的400块，走在3点的大城市街头，这里灯很亮，他们穿得很好看，出门前妈妈说，要是觉得累，就回来。我捏了捏手心里的纸币，发誓要给她幸福",
+      "time": 1458422273045,
+      "liked": false,
+      "likedCount": 2217,
+      "commentId": 131647587
+    },
+    {
+      "user": {
+        "locationInfo": null,
+        "expertTags": null,
+        "avatarUrl": "http://p1.music.126.net/ZDKao3EGMyxDJ1A8DIuXyA==/1378787583127683.jpg",
+        "authStatus": 0,
+        "remarkName": null,
+        "userId": 137331718,
+        "vipType": 0,
+        "userType": 0,
+        "nickname": "第五个影子"
+      },
+      "beReplied": [],
+      "content": "人生过了三分之一，后悔的是，没有学过音乐，不会吉他，不会钢琴，没唱过摇滚，如果人生不需要考虑世俗的东西，工作、‘赚钱、养家、老人这一切统统不需考虑，我一定选择做一名音乐演奏者，在高山、在大海、在草原、在森林、在日出、在日落、在暮春、在盛夏。。。。。赞美生命。。赞美遇到的一切美好",
+      "time": 1456729491806,
+      "liked": false,
+      "likedCount": 1982,
+      "commentId": 124776685
+    },
+    {
+      "user": {
+        "locationInfo": null,
+        "expertTags": null,
+        "avatarUrl": "http://p1.music.126.net/D_ML02XTVdcAawvKl34xgw==/109951162931087491.jpg",
+        "authStatus": 0,
+        "remarkName": null,
+        "userId": 44682411,
+        "vipType": 10,
+        "userType": 0,
+        "nickname": "何之州-"
+      },
+      "beReplied": [],
+      "content": "和汉斯季默的 time 推动手法相似",
+      "time": 1423672624060,
+      "liked": false,
+      "likedCount": 1758,
+      "commentId": 10576642
+    },
+    {
+      "user": {
+        "locationInfo": null,
+        "expertTags": null,
+        "avatarUrl": "http://p1.music.126.net/BhXUOzPOgbwnkhLfb0j0PA==/1369991496336213.jpg",
+        "authStatus": 0,
+        "remarkName": null,
+        "userId": 47302310,
+        "vipType": 10,
+        "userType": 0,
+        "nickname": "一只绿柚"
+      },
+      "beReplied": [],
+      "content": "世界之隙：between worlds。从花苞静放 到 潮起云涌；从日月星辰 到 火山喷发；从蜉蝣孑孓 到 鹰鹏鲸象；从individual 到 human being...整首歌像不断拉近的长焦镜头，刺破时空的羁绊，审视渺渺众生。从第3分钟开始，成长、升华、涅槃。曲末又如烟花散尽的余焰，周遭归于沉寂。",
+      "time": 1452520281412,
+      "liked": false,
+      "likedCount": 915,
+      "commentId": 2855602342
+    }
+  ],
   "code": 200,
   "comments": [
     {
       "user": {
         "locationInfo": null,
         "expertTags": null,
-        "nickname": "五迷三道170523",
-        "userType": 0,
-        "userId": 491792829,
-        "vipType": 0,
-        "avatarUrl": "http://p1.music.126.net/OJpshVtAgsSlVWeltqiWCA==/18807146395027550.jpg",
+        "avatarUrl": "http://p1.music.126.net/WBUbOdZiPDnKS3tmacX76Q==/1389782699775529.jpg",
         "authStatus": 0,
-        "remarkName": null
-      },
-      "beReplied": [
-        {
-          "user": {
-            "locationInfo": null,
-            "expertTags": null,
-            "nickname": "徘徊_列车",
-            "userType": 0,
-            "userId": 257122156,
-            "vipType": 0,
-            "avatarUrl": "http://p1.music.126.net/fz26wi52MsoW6IifG9QhWg==/1404076352234898.jpg",
-            "authStatus": 0,
-            "remarkName": null
-          },
-          "content": "哈哈哈，听完我就去考试[大哭][大哭][大哭]",
-          "status": 0
-        }
-      ],
-      "liked": false,
-      "likedCount": 0,
-      "commentId": 393461123,
-      "time": 1495776944146,
-      "content": "昨天刚考完…苦不堪言",
-      "isRemoveHotComment": false
-    },
-    {
-      "user": {
-        "locationInfo": null,
-        "expertTags": null,
-        "nickname": "duckmorning",
-        "userType": 0,
-        "userId": 100640383,
+        "remarkName": null,
+        "userId": 249458173,
         "vipType": 0,
-        "avatarUrl": "http://p1.music.126.net/hg2I5DSC9jLetjSQz95GOg==/109951162886233863.jpg",
-        "authStatus": 0,
-        "remarkName": null
+        "userType": 0,
+        "nickname": "倥界"
       },
       "beReplied": [],
-      "liked": false,
-      "likedCount": 3,
-      "commentId": 393446650,
-      "time": 1495776688009,
-      "content": "不知道这种歌为啥会火[这边]",
-      "isRemoveHotComment": false
-    },
-    {
-      "user": {
-        "locationInfo": null,
-        "expertTags": null,
-        "nickname": "徘徊_列车",
-        "userType": 0,
-        "userId": 257122156,
-        "vipType": 0,
-        "avatarUrl": "http://p1.music.126.net/fz26wi52MsoW6IifG9QhWg==/1404076352234898.jpg",
-        "authStatus": 0,
-        "remarkName": null
-      },
-      "beReplied": [
-        {
-          "user": {
-            "locationInfo": null,
-            "expertTags": null,
-            "nickname": "五迷三道170523",
-            "userType": 0,
-            "userId": 491792829,
-            "vipType": 0,
-            "avatarUrl": "http://p1.music.126.net/OJpshVtAgsSlVWeltqiWCA==/18807146395027550.jpg",
-            "authStatus": 0,
-            "remarkName": null
-          },
-          "content": "高三狗靠着这歌减轻压力[口罩]",
-          "status": 0
-        }
-      ],
-      "liked": false,
-      "likedCount": 0,
-      "commentId": 393459016,
-      "time": 1495776620611,
-      "content": "哈哈哈，听完我就去考试[大哭][大哭][大哭]",
-      "isRemoveHotComment": false
-    },
-    {
-      "user": {
-        "locationInfo": null,
-        "expertTags": null,
-        "nickname": "五迷三道170523",
-        "userType": 0,
-        "userId": 491792829,
-        "vipType": 0,
-        "avatarUrl": "http://p1.music.126.net/OJpshVtAgsSlVWeltqiWCA==/18807146395027550.jpg",
-        "authStatus": 0,
-        "remarkName": null
-      },
-      "beReplied": [],
+      "content": "或许    人在第三秒就出现了。   在往后几百亿年。   现在又算得了什么那。   或许只是曾经吧。",
+      "time": 1496217484261,
       "liked": false,
       "likedCount": 1,
-      "commentId": 393449566,
-      "time": 1495776481351,
-      "content": "高三狗靠着这歌减轻压力[口罩]",
+      "commentId": 424264455,
       "isRemoveHotComment": false
     },
     {
       "user": {
         "locationInfo": null,
         "expertTags": null,
-        "nickname": "555米粒",
-        "userType": 0,
-        "userId": 270924057,
-        "vipType": 0,
-        "avatarUrl": "http://p1.music.126.net/KuWUS8ojSeqWmANwO1U2nw==/18824738580921889.jpg",
+        "avatarUrl": "http://p1.music.126.net/SIfzP1mHIY9v0MRomcwYmA==/19200771555989002.jpg",
         "authStatus": 0,
-        "remarkName": null
+        "remarkName": null,
+        "userId": 329520234,
+        "vipType": 0,
+        "userType": 0,
+        "nickname": "Autismaaa"
       },
       "beReplied": [],
+      "content": "喜欢这首歌的大都不是被爱的那个    是么",
+      "time": 1496215760546,
       "liked": false,
       "likedCount": 0,
-      "commentId": 393455215,
-      "time": 1495776434177,
-      "content": "听着歌洗着澡，就跳了起来[汗][汗]",
+      "commentId": 424240726,
       "isRemoveHotComment": false
     },
     {
       "user": {
         "locationInfo": null,
         "expertTags": null,
-        "nickname": "刘小刀睡不完",
-        "userType": 0,
-        "userId": 119992220,
-        "vipType": 0,
-        "avatarUrl": "http://p1.music.126.net/WN3XuwRDUL4Xj0-h5F7T1Q==/1364493963982764.jpg",
+        "avatarUrl": "http://p1.music.126.net/__wQB-VDGBo4vEf3RJXlrg==/19174383276930336.jpg",
         "authStatus": 0,
-        "remarkName": null
+        "remarkName": null,
+        "userId": 414511738,
+        "vipType": 0,
+        "userType": 0,
+        "nickname": "1只螃蟹"
       },
       "beReplied": [],
+      "content": "没有MV了，真的是明天睡觉前都想看的MV。[流泪]没有了",
+      "time": 1496213168686,
+      "liked": false,
+      "likedCount": 0,
+      "commentId": 424225313,
+      "isRemoveHotComment": false
+    },
+    {
+      "user": {
+        "locationInfo": null,
+        "expertTags": null,
+        "avatarUrl": "http://p1.music.126.net/VnZiScyynLG7atLIZ2YPkw==/18686200114669622.jpg",
+        "authStatus": 0,
+        "remarkName": null,
+        "userId": 282685903,
+        "vipType": 0,
+        "userType": 0,
+        "nickname": "提琴之城"
+      },
+      "beReplied": [],
+      "content": "和光年之外旋律好像Q_Q",
+      "time": 1496211895172,
+      "liked": false,
+      "likedCount": 0,
+      "commentId": 424200810,
+      "isRemoveHotComment": false
+    },
+    {
+      "user": {
+        "locationInfo": null,
+        "expertTags": null,
+        "avatarUrl": "http://p1.music.126.net/DSaBjMPUxa5Is2IBHSQLCQ==/18880813672212490.jpg",
+        "authStatus": 0,
+        "remarkName": null,
+        "userId": 303549484,
+        "vipType": 0,
+        "userType": 0,
+        "nickname": "VII__LONELY"
+      },
+      "beReplied": [],
+      "content": "震撼人心[爱心]",
+      "time": 1496210063340,
+      "liked": false,
+      "likedCount": 1,
+      "commentId": 424193195,
+      "isRemoveHotComment": false
+    },
+    {
+      "user": {
+        "locationInfo": null,
+        "expertTags": null,
+        "avatarUrl": "http://p1.music.126.net/4PZEdRMkB01JVF11tG33Ag==/109951162794818031.jpg",
+        "authStatus": 0,
+        "remarkName": null,
+        "userId": 341265529,
+        "vipType": 0,
+        "userType": 0,
+        "nickname": "起个ID神烦"
+      },
+      "beReplied": [
+        {
+          "user": {
+            "locationInfo": null,
+            "expertTags": null,
+            "avatarUrl": "http://p1.music.126.net/BUmRR-ADPJx97YrJOrncWw==/3265549621214248.jpg",
+            "authStatus": 0,
+            "remarkName": null,
+            "userId": 376272091,
+            "vipType": 0,
+            "userType": 0,
+            "nickname": "爱你哟L"
+          },
+          "content": "还有16天考中考，我真的累了，真的不想努力了，我只希望逃离，快点逃离，我真的失败了，什么豪情壮志，什么面向未来，我都要输了，希望生活想你们说的那样，有很多种方法可以度过，我真的讨厌这种生活了。",
+          "status": 0
+        }
+      ],
+      "content": "放轻松，我高考的时候也没这么纠结啊。考完试拿了400块钱就出门了，把甘肃南半部分基本都玩遍了，有的时候不用太多压力。",
+      "time": 1496209981221,
+      "liked": false,
+      "likedCount": 0,
+      "commentId": 424193151,
+      "isRemoveHotComment": false
+    },
+    {
+      "user": {
+        "locationInfo": null,
+        "expertTags": null,
+        "avatarUrl": "http://p1.music.126.net/BUmRR-ADPJx97YrJOrncWw==/3265549621214248.jpg",
+        "authStatus": 0,
+        "remarkName": null,
+        "userId": 376272091,
+        "vipType": 0,
+        "userType": 0,
+        "nickname": "爱你哟L"
+      },
+      "beReplied": [],
+      "content": "还有16天考中考，我真的累了，真的不想努力了，我只希望逃离，快点逃离，我真的失败了，什么豪情壮志，什么面向未来，我都要输了，希望生活想你们说的那样，有很多种方法可以度过，我真的讨厌这种生活了。",
+      "time": 1496208405765,
       "liked": false,
       "likedCount": 2,
-      "commentId": 393454299,
-      "time": 1495776327075,
-      "content": "有没有像我一样觉得这个歌好烦[大哭]",
+      "commentId": 424168324,
       "isRemoveHotComment": false
     },
     {
       "user": {
         "locationInfo": null,
         "expertTags": null,
-        "nickname": "蝙蝠虾小至",
-        "userType": 0,
-        "userId": 39016690,
-        "vipType": 0,
-        "avatarUrl": "http://p1.music.126.net/3IFhxTnu61vMnM5gVT3LBA==/1375489055319647.jpg",
+        "avatarUrl": "http://p1.music.126.net/GZWZCURrtL-gVwkdkl7ZXA==/1396379783414550.jpg",
         "authStatus": 0,
-        "remarkName": null
+        "remarkName": null,
+        "userId": 330484929,
+        "vipType": 11,
+        "userType": 0,
+        "nickname": "迅捷斥候灬提莫"
       },
       "beReplied": [],
+      "content": "还有七天，高考，我来了!",
+      "time": 1496207210778,
       "liked": false,
-      "likedCount": 1,
-      "commentId": 393456032,
-      "time": 1495776229824,
-      "content": "大家都不知道牛奶咖啡吗？还都是因为欢乐颂来的。",
+      "likedCount": 2,
+      "commentId": 424141630,
       "isRemoveHotComment": false
     },
     {
       "user": {
         "locationInfo": null,
         "expertTags": null,
-        "nickname": "炫酷的斑马",
-        "userType": 0,
-        "userId": 315993668,
-        "vipType": 0,
-        "avatarUrl": "http://p1.music.126.net/2I8iTpWfCR7pU2tEwJ3Ikg==/18547661649546468.jpg",
+        "avatarUrl": "http://p1.music.126.net/VnZiScyynLG7atLIZ2YPkw==/18686200114669622.jpg",
         "authStatus": 0,
-        "remarkName": null
-      },
-      "beReplied": [],
-      "liked": false,
-      "likedCount": 5,
-      "commentId": 393441448,
-      "time": 1495776123717,
-      "content": "李白是我们中国古代的（  D  ）\nA政治家\nB诗人\nC散文家\nD刺客 ​​​",
-      "isRemoveHotComment": false
-    },
-    {
-      "user": {
-        "locationInfo": null,
-        "expertTags": null,
-        "nickname": "塘桥夜话Cindy",
-        "userType": 0,
-        "userId": 492527321,
+        "remarkName": null,
+        "userId": 423550136,
         "vipType": 0,
-        "avatarUrl": "http://p1.music.126.net/95ydiYUPMrc2Nh5g0bPIxQ==/19100715997892342.jpg",
-        "authStatus": 0,
-        "remarkName": null
+        "userType": 0,
+        "nickname": "forever额to额you"
       },
       "beReplied": [
         {
           "user": {
             "locationInfo": null,
             "expertTags": null,
-            "nickname": "我要烧起来了",
+            "avatarUrl": "http://p1.music.126.net/eHajGs-NuKJRi8ciC7WUgA==/109951162918420750.jpg",
+            "authStatus": 0,
+            "remarkName": null,
+            "userId": 42656582,
+            "vipType": 0,
             "userType": 0,
-            "userId": 104328900,
+            "nickname": "Yolanda_Enigma"
+          },
+          "content": "已经24小时不食米水，昨晚做好清肠，早晨五点做好术前准备，换好衣服戴好帽子，躺在单人间病房里慢慢挂糖盐水。\n沉静中有力量。冥冥中有希望。\n很高兴，在手术前听到这首歌。",
+          "status": 0
+        }
+      ],
+      "content": "祝你身体恢复，越来越好，我的一个亲人得了肠病，但好在治好了，希望你和她一样，顺利",
+      "time": 1496205458374,
+      "liked": false,
+      "likedCount": 2,
+      "commentId": 424130095,
+      "isRemoveHotComment": false
+    },
+    {
+      "user": {
+        "locationInfo": null,
+        "expertTags": null,
+        "avatarUrl": "http://p1.music.126.net/xBY-3meDXwwszMTvfG4Zzg==/18725782534300652.jpg",
+        "authStatus": 0,
+        "remarkName": null,
+        "userId": 379618362,
+        "vipType": 0,
+        "userType": 0,
+        "nickname": "吾便是汝的王"
+      },
+      "beReplied": [
+        {
+          "user": {
+            "locationInfo": null,
+            "expertTags": null,
+            "avatarUrl": "http://p1.music.126.net/VnZiScyynLG7atLIZ2YPkw==/18686200114669622.jpg",
+            "authStatus": 0,
+            "remarkName": null,
+            "userId": 339384006,
+            "vipType": 0,
+            "userType": 0,
+            "nickname": "甜狗的英俊主人"
+          },
+          "content": "地球没形成哪来的午夜[大哭]",
+          "status": 0
+        }
+      ],
+      "content": "他用一天代表着整个世界的起点到终点，人类在最后四秒出现",
+      "time": 1496199154015,
+      "liked": false,
+      "likedCount": 1,
+      "commentId": 424058258,
+      "isRemoveHotComment": false
+    },
+    {
+      "user": {
+        "locationInfo": null,
+        "expertTags": null,
+        "avatarUrl": "http://p1.music.126.net/obMKvVWnmBwH-aMQHJ3z7w==/18826937603427999.jpg",
+        "authStatus": 0,
+        "remarkName": null,
+        "userId": 357844608,
+        "vipType": 0,
+        "userType": 0,
+        "nickname": "v丶PERCZ"
+      },
+      "beReplied": [],
+      "content": "谁和我一样当时听这首歌是在小米松果芯片的发布会上，背景汪洋大海，我心澎湃。",
+      "time": 1496190181886,
+      "liked": false,
+      "likedCount": 0,
+      "commentId": 423982324,
+      "isRemoveHotComment": false
+    },
+    {
+      "user": {
+        "locationInfo": null,
+        "expertTags": null,
+        "avatarUrl": "http://p1.music.126.net/wf1Tef9zxKzW_VJb1LkvbQ==/18633423557664437.jpg",
+        "authStatus": 0,
+        "remarkName": null,
+        "userId": 316691917,
+        "vipType": 0,
+        "userType": 0,
+        "nickname": "ADHANLu"
+      },
+      "beReplied": [
+        {
+          "user": {
+            "locationInfo": null,
+            "expertTags": null,
+            "avatarUrl": "http://p1.music.126.net/W9D3Cw6IeDjxNOBcS3A6oA==/19013854579290803.jpg",
+            "authStatus": 0,
+            "remarkName": null,
+            "userId": 286217218,
+            "vipType": 0,
+            "userType": 0,
+            "nickname": "钟和钟爱冰"
+          },
+          "content": "17年春节过后，从厦门回北京，坐上火车前用这首背景音乐剪了一个5分钟的短片，记录那个简单的假期，有痛的亲情，有人生的思索，有对她的思念，有厦图夜空默默的考研复习。",
+          "status": 0
+        }
+      ],
+      "content": "有链接吗？",
+      "time": 1496188907724,
+      "liked": false,
+      "likedCount": 0,
+      "commentId": 423972395,
+      "isRemoveHotComment": false
+    },
+    {
+      "user": {
+        "locationInfo": null,
+        "expertTags": null,
+        "avatarUrl": "http://p1.music.126.net/exVGBB7hTlFifGcroqLKqw==/109951162898054139.jpg",
+        "authStatus": 0,
+        "remarkName": null,
+        "userId": 298924573,
+        "vipType": 0,
+        "userType": 0,
+        "nickname": "笑而不语又痛而不言"
+      },
+      "beReplied": [
+        {
+          "user": {
+            "locationInfo": null,
+            "expertTags": null,
+            "avatarUrl": "http://p1.music.126.net/whupZ9uqXLn23Yi88hlddQ==/1365593475524839.jpg",
+            "authStatus": 0,
+            "remarkName": null,
+            "userId": 109824911,
+            "vipType": 0,
+            "userType": 0,
+            "nickname": "蓝骑士与红蔷薇"
+          },
+          "content": "谢谢~😊",
+          "status": 0
+        }
+      ],
+      "content": "考完，我等你的好消息[强]",
+      "time": 1496182493185,
+      "liked": false,
+      "likedCount": 0,
+      "commentId": 423952123,
+      "isRemoveHotComment": false
+    },
+    {
+      "user": {
+        "locationInfo": null,
+        "expertTags": null,
+        "avatarUrl": "http://p1.music.126.net/6H2GuLmbqQRUtiijK8PTiA==/18582846021285187.jpg",
+        "authStatus": 0,
+        "remarkName": null,
+        "userId": 78300200,
+        "vipType": 0,
+        "userType": 0,
+        "nickname": "我非烂柯人"
+      },
+      "beReplied": [],
+      "content": "开头的空灵让我体会到了音乐也有留白艺术！！！[大笑]",
+      "time": 1496179540170,
+      "liked": false,
+      "likedCount": 0,
+      "commentId": 423926944,
+      "isRemoveHotComment": false
+    },
+    {
+      "user": {
+        "locationInfo": null,
+        "expertTags": null,
+        "avatarUrl": "http://p1.music.126.net/cp6eseLnHYzsUAXIt5R7kw==/109951162934466904.jpg",
+        "authStatus": 0,
+        "remarkName": null,
+        "userId": 485360597,
+        "vipType": 0,
+        "userType": 0,
+        "nickname": "7afxvY"
+      },
+      "beReplied": [],
+      "content": "嘻嘻",
+      "time": 1496177517143,
+      "liked": false,
+      "likedCount": 0,
+      "commentId": 423927894,
+      "isRemoveHotComment": false
+    },
+    {
+      "user": {
+        "locationInfo": null,
+        "expertTags": null,
+        "avatarUrl": "http://p1.music.126.net/zTN-DBBM8EK_wZG84yMtHQ==/18642219650874683.jpg",
+        "authStatus": 0,
+        "remarkName": null,
+        "userId": 283828646,
+        "vipType": 0,
+        "userType": 0,
+        "nickname": "大和守家不安定"
+      },
+      "beReplied": [
+        {
+          "user": {
+            "locationInfo": null,
+            "expertTags": null,
+            "avatarUrl": "http://p1.music.126.net/VnZiScyynLG7atLIZ2YPkw==/18686200114669622.jpg",
+            "authStatus": 0,
+            "remarkName": null,
+            "userId": 339384006,
+            "vipType": 0,
+            "userType": 0,
+            "nickname": "甜狗的英俊主人"
+          },
+          "content": "地球没形成哪来的午夜[大哭]",
+          "status": 0
+        }
+      ],
+      "content": "大概把地球生命的进化当做一天来看，午夜就是地球的开始。",
+      "time": 1496168424666,
+      "liked": false,
+      "likedCount": 0,
+      "commentId": 423919466,
+      "isRemoveHotComment": false
+    },
+    {
+      "user": {
+        "locationInfo": null,
+        "expertTags": null,
+        "avatarUrl": "http://p1.music.126.net/wxdY-fDyq7F2e-GSD-2OmQ==/18501482162445470.jpg",
+        "authStatus": 0,
+        "remarkName": null,
+        "userId": 343746440,
+        "vipType": 0,
+        "userType": 0,
+        "nickname": "南柯ac"
+      },
+      "beReplied": [],
+      "content": "回程的今天跟见的人不愉快，我安慰自己没事不过各取所需，跟上一次回程一样我又在高铁上掉了眼泪。没有别的，不舍得放。我张开手索取拥抱，只是这次你的回应好勉强连做做样子都不配合了。没有走不完的路 也没有爱不完的感情  给你空间里的最后一条留言“当你没见过我”。",
+      "time": 1496166350696,
+      "liked": false,
+      "likedCount": 1,
+      "commentId": 423914156,
+      "isRemoveHotComment": false
+    },
+    {
+      "user": {
+        "locationInfo": null,
+        "expertTags": null,
+        "avatarUrl": "http://p1.music.126.net/glBgsbdXAScTMFoKJ64Ilg==/19043541393209520.jpg",
+        "authStatus": 0,
+        "remarkName": null,
+        "userId": 366639103,
+        "vipType": 10,
+        "userType": 0,
+        "nickname": "彼岸无用"
+      },
+      "beReplied": [
+        {
+          "user": {
+            "locationInfo": null,
+            "expertTags": null,
+            "avatarUrl": "http://p1.music.126.net/nlb2XAw_iifhJ57VV_J3dA==/18978670207065601.jpg",
+            "authStatus": 0,
+            "remarkName": null,
+            "userId": 65583879,
+            "vipType": 0,
+            "userType": 0,
+            "nickname": "IBMX201i"
+          },
+          "content": "为了生活，为了明天，努力。",
+          "status": 0
+        }
+      ],
+      "content": "加油[可爱]",
+      "time": 1496165590055,
+      "liked": false,
+      "likedCount": 0,
+      "commentId": 423893845,
+      "isRemoveHotComment": false
+    },
+    {
+      "user": {
+        "locationInfo": null,
+        "expertTags": null,
+        "avatarUrl": "http://p1.music.126.net/nlb2XAw_iifhJ57VV_J3dA==/18978670207065601.jpg",
+        "authStatus": 0,
+        "remarkName": null,
+        "userId": 65583879,
+        "vipType": 0,
+        "userType": 0,
+        "nickname": "IBMX201i"
+      },
+      "beReplied": [
+        {
+          "user": {
+            "locationInfo": null,
+            "expertTags": null,
+            "avatarUrl": "http://p1.music.126.net/glBgsbdXAScTMFoKJ64Ilg==/19043541393209520.jpg",
+            "authStatus": 0,
+            "remarkName": null,
+            "userId": 366639103,
             "vipType": 10,
-            "avatarUrl": "http://p1.music.126.net/MV0sLt4IxzG_Byx2ewugYA==/19082024300188959.jpg",
-            "authStatus": 0,
-            "remarkName": null
+            "userType": 0,
+            "nickname": "彼岸无用"
           },
-          "content": "魅族 锤子 金立 一加，vivo 诺基亚；华为 三星 摩托罗拉，小米 oppo 苹果8。",
+          "content": "看到这条居然眼里有泪花",
           "status": 0
         }
       ],
+      "content": "为了生活，为了明天，努力。",
+      "time": 1496159373072,
       "liked": false,
       "likedCount": 1,
-      "commentId": 393445369,
-      "time": 1495776068392,
-      "content": "要唱出来啦[大哭]",
+      "commentId": 423823408,
       "isRemoveHotComment": false
     },
     {
       "user": {
         "locationInfo": null,
         "expertTags": null,
-        "nickname": "浮云朵児",
-        "userType": 0,
-        "userId": 413838582,
-        "vipType": 0,
-        "avatarUrl": "http://p1.music.126.net/YxO5gh6vpqpEOFyS4Uo4fA==/19235955928010698.jpg",
+        "avatarUrl": "http://p1.music.126.net/nlb2XAw_iifhJ57VV_J3dA==/18978670207065601.jpg",
         "authStatus": 0,
-        "remarkName": null
+        "remarkName": null,
+        "userId": 65583879,
+        "vipType": 0,
+        "userType": 0,
+        "nickname": "IBMX201i"
       },
       "beReplied": [
         {
           "user": {
             "locationInfo": null,
             "expertTags": null,
-            "nickname": "xxxibgdrgn大爆炸",
-            "userType": 0,
-            "userId": 274603869,
-            "vipType": 0,
-            "avatarUrl": "http://p1.music.126.net/xg8Zf1lffeN8xXS3i0PQUw==/1424967078912179.jpg",
+            "avatarUrl": "http://p1.music.126.net/nQe55zyOwhXkTLzCyXPWQw==/109951162935247309.jpg",
             "authStatus": 0,
-            "remarkName": null
+            "remarkName": null,
+            "userId": 383332387,
+            "vipType": 0,
+            "userType": 0,
+            "nickname": "绿光菌"
           },
-          "content": "是不是高三狗[流泪]",
+          "content": "生命脆弱而绚烂，祝她天国安好",
           "status": 0
         }
       ],
+      "content": "谢谢你，谢谢你。",
+      "time": 1496159340046,
       "liked": false,
       "likedCount": 0,
-      "commentId": 393441418,
-      "time": 1495776052653,
-      "content": "哈哈😄",
-      "isRemoveHotComment": false
-    },
-    {
-      "user": {
-        "locationInfo": null,
-        "expertTags": null,
-        "nickname": "李槿尘",
-        "userType": 0,
-        "userId": 370623027,
-        "vipType": 0,
-        "avatarUrl": "http://p1.music.126.net/EE4olj-ibvY1ARv6P0uKCQ==/18500382650602622.jpg",
-        "authStatus": 0,
-        "remarkName": null
-      },
-      "beReplied": [],
-      "liked": false,
-      "likedCount": 2,
-      "commentId": 393447225,
-      "time": 1495775901565,
-      "content": "这让我想起来《菠萝菠萝蜜》，😄",
-      "isRemoveHotComment": false
-    },
-    {
-      "user": {
-        "locationInfo": null,
-        "expertTags": null,
-        "nickname": "Y-x-D",
-        "userType": 0,
-        "userId": 104208012,
-        "vipType": 0,
-        "avatarUrl": "http://p1.music.126.net/hBqJI62P2FOik4s8Nu5lHQ==/18616930883433656.jpg",
-        "authStatus": 0,
-        "remarkName": null
-      },
-      "beReplied": [],
-      "liked": false,
-      "likedCount": 0,
-      "commentId": 393425901,
-      "time": 1495775361802,
-      "content": "羡慕羡慕",
-      "isRemoveHotComment": false
-    },
-    {
-      "user": {
-        "locationInfo": null,
-        "expertTags": null,
-        "nickname": "ZZHJING",
-        "userType": 0,
-        "userId": 52788890,
-        "vipType": 0,
-        "avatarUrl": "http://p1.music.126.net/J9DRhE4JCFV58Hv6ke7W1Q==/1391981736688148.jpg",
-        "authStatus": 0,
-        "remarkName": null
-      },
-      "beReplied": [],
-      "liked": false,
-      "likedCount": 3,
-      "commentId": 393422787,
-      "time": 1495775216355,
-      "content": "好像曲筱绡的声音[呆]",
-      "isRemoveHotComment": false
-    },
-    {
-      "user": {
-        "locationInfo": null,
-        "expertTags": null,
-        "nickname": "傅季乐",
-        "userType": 0,
-        "userId": 91022274,
-        "vipType": 0,
-        "avatarUrl": "http://p1.music.126.net/_jsgVHzM5TXexB8hUjRXnw==/18586144556769571.jpg",
-        "authStatus": 0,
-        "remarkName": null
-      },
-      "beReplied": [],
-      "liked": false,
-      "likedCount": 2,
-      "commentId": 393414841,
-      "time": 1495775059600,
-      "content": "我猜只有我是看到是牛奶咖啡才点进来，而且是轻快的歌",
-      "isRemoveHotComment": false
-    },
-    {
-      "user": {
-        "locationInfo": null,
-        "expertTags": null,
-        "nickname": "ss8882",
-        "userType": 0,
-        "userId": 452493532,
-        "vipType": 0,
-        "avatarUrl": "http://p1.music.126.net/mV4cVEqo-souziEAQfHYng==/18625726976386774.jpg",
-        "authStatus": 0,
-        "remarkName": null
-      },
-      "beReplied": [],
-      "liked": false,
-      "likedCount": 0,
-      "commentId": 393413711,
-      "time": 1495774922324,
-      "content": "想出去玩了",
-      "isRemoveHotComment": false
-    },
-    {
-      "user": {
-        "locationInfo": null,
-        "expertTags": null,
-        "nickname": "32站住借个吻",
-        "userType": 0,
-        "userId": 33702782,
-        "vipType": 0,
-        "avatarUrl": "http://p1.music.126.net/_d3lZYdvBcmBm9Y8IgpXww==/109951162806059924.jpg",
-        "authStatus": 0,
-        "remarkName": null
-      },
-      "beReplied": [],
-      "liked": false,
-      "likedCount": 3,
-      "commentId": 393409827,
-      "time": 1495774683605,
-      "content": "我以为是曲筱绡唱的",
-      "isRemoveHotComment": false
-    },
-    {
-      "user": {
-        "locationInfo": null,
-        "expertTags": null,
-        "nickname": "甜到掉牙了w",
-        "userType": 0,
-        "userId": 42108010,
-        "vipType": 0,
-        "avatarUrl": "http://p1.music.126.net/EAy0Nt0VMoxHZam5031IGQ==/19088621369943148.jpg",
-        "authStatus": 0,
-        "remarkName": null
-      },
-      "beReplied": [],
-      "liked": false,
-      "likedCount": 3,
-      "commentId": 393409421,
-      "time": 1495773989406,
-      "content": "惨了我已经会唱了[大哭]要起祸害别人了",
-      "isRemoveHotComment": false
-    },
-    {
-      "user": {
-        "locationInfo": null,
-        "expertTags": null,
-        "nickname": "45Du仰望幸福",
-        "userType": 0,
-        "userId": 362871119,
-        "vipType": 0,
-        "avatarUrl": "http://p1.music.126.net/CFvzCnNbP58qWr5qtQHTZw==/18570751394345708.jpg",
-        "authStatus": 0,
-        "remarkName": null
-      },
-      "beReplied": [],
-      "liked": false,
-      "likedCount": 3,
-      "commentId": 393409367,
-      "time": 1495773901843,
-      "content": "这竟然是我日推的歌，已经被洗脑了！",
-      "isRemoveHotComment": false
-    },
-    {
-      "user": {
-        "locationInfo": null,
-        "expertTags": null,
-        "nickname": "琳宝宝只是一只宝宝",
-        "userType": 0,
-        "userId": 353778550,
-        "vipType": 0,
-        "avatarUrl": "http://p1.music.126.net/wwoJ_iAj_1F7bcEwcyMJlA==/19001759951369985.jpg",
-        "authStatus": 0,
-        "remarkName": null
-      },
-      "beReplied": [],
-      "liked": false,
-      "likedCount": 1,
-      "commentId": 393399879,
-      "time": 1495773795670,
-      "content": "每日一洗脑",
-      "isRemoveHotComment": false
-    },
-    {
-      "user": {
-        "locationInfo": null,
-        "expertTags": null,
-        "nickname": "薛之谦的自拍w",
-        "userType": 0,
-        "userId": 368930014,
-        "vipType": 0,
-        "avatarUrl": "http://p1.music.126.net/RvolNrj3mk0E52zCRN1R9g==/18638921115906317.jpg",
-        "authStatus": 0,
-        "remarkName": null
-      },
-      "beReplied": [
-        {
-          "user": {
-            "locationInfo": null,
-            "expertTags": null,
-            "nickname": "花荔粥",
-            "userType": 0,
-            "userId": 290951850,
-            "vipType": 0,
-            "avatarUrl": "http://p1.music.126.net/JX5KPNeSByx9g-XbTD44Dw==/19089720881531301.jpg",
-            "authStatus": 0,
-            "remarkName": null
-          },
-          "content": "这一定是一个极好的宣传东南亚旅游的宣传曲[大哭]",
-          "status": 0
-        }
-      ],
-      "liked": false,
-      "likedCount": 0,
-      "commentId": 393415007,
-      "time": 1495773750973,
-      "content": "同城耶w",
+      "commentId": 423811890,
       "isRemoveHotComment": false
     }
   ],
-  "total": 20876,
+  "total": 25147,
   "more": true
 }

@@ -18,6 +18,8 @@ import javax.annotation.PostConstruct;
 @Component
 public class InitListener implements ApplicationListener<ApplicationReadyEvent> {
     private static final Logger LOGGER = LoggerFactory.getLogger(InitListener.class);
+
+    public static boolean useLocalIp=true;
     @Autowired
     private SpiderMusic spiderMusic;
 

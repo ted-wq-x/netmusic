@@ -1,6 +1,5 @@
 package wangqiang.website.listener;
 
-import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -12,13 +11,15 @@ import wangqiang.website.modal.UserVo;
 import wangqiang.website.service.CommentsRepository;
 import wangqiang.website.service.MusicRepository;
 import wangqiang.website.service.UserRepository;
+import wangqiang.website.spider.SongSpider;
+import wangqiang.website.spider.Spider;
+import wangqiang.website.spider.UserSpider;
 
 import javax.annotation.PostConstruct;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.*;
 
-import static wangqiang.website.utils.Spider.spiderMetMusic;
 
 /**
  * Created by wangq on 2017/5/26.
@@ -37,100 +38,91 @@ public class SpiderMusic {
     @Autowired
     private MusicRepository musicRepository;
 
-    private ExecutorCompletionService<JSONObject> service = null;
+    private ExecutorService executorService = Executors.newFixedThreadPool(Runtime.getRuntime().availableProcessors() + 1);
 
 
-    /**
-     * 限制向任务队列提交任务的个数
-     */
-    private LinkedBlockingQueue<Integer> queue = new LinkedBlockingQueue<>(25);
-    /**
-     * 缓存爬取的数据，达到100个时存入数据库
-     */
-    private BlockingQueue<UserVo> blockingQueueUser = new LinkedBlockingQueue<>();
-    private BlockingQueue<MusicVo> blockingQueueMusic = new LinkedBlockingQueue<>();
-    private BlockingQueue<CommentsVo> blockingQueueComments = new LinkedBlockingQueue<>();
-
-    @PostConstruct
-    private void init() {
-//     存放任务执行结果的队列
-        BlockingQueue<Future<JSONObject>> completeTask = new LinkedBlockingQueue<>();
-        ExecutorService executorService = Executors.newFixedThreadPool((Runtime.getRuntime().availableProcessors() + 1) * 2);
-        service = new ExecutorCompletionService<>(executorService, completeTask);
-    }
-
-    //    @Override
     public void startThisSpider() {
         LOGGER.info("Enter startThisSpider method。");
-        new Thread(this::main).start();
-        new Thread(this::complateTask).start();
+        new Thread(this::userSpiderThread).start();
+        new Thread(this::songSpiderThread).start();
+        new Thread(this::complateTask).start();//执行数据入库的线程
         LOGGER.info("Exit startThisSpider method.");
     }
 
-    @Deprecated
-    private int getCurrentNum() {
-        return musicRepository.selectMax() + 1;
-    }
 
     /**
-     * 根据歌曲获取用户
+     * song数据的爬取，使用的是线程池
      */
-    private void main() {
-        LOGGER.info("Enter spider main method");
-//        while (true) {
-//            int andIncrement = atomicInteger.getAndIncrement();
-//            if (andIncrement >= 1000000000) {
-//                LOGGER.info("num gt 1000000000");
-//                insertMusic();
-//                break;
-//            }
-//            try {
-//                queue.put(1);
-//            } catch (InterruptedException e) {
-//                e.printStackTrace();
-//            }
-//            LOGGER.info("submit task num={}", andIncrement);
-//            service.submit(new InitListener.task(andIncrement));
-//        }
-        LOGGER.info("Exit spider main method");
-    }
-
-    /**
-     * 执行任务合并
-     */
-    private void complateTask() {
-        LOGGER.info("Enter spider complateTask method");
+    private void songSpiderThread(){
         while (true) {
+            Spider spider = new SongSpider();
             try {
-                Future<JSONObject> take = service.take();
-//                出现null exception
-                JSONObject musicVousicVo = take.get();
-                calculate(musicVousicVo);
-                if (blockingQueueMusic.size() >= 100) {
-                    insertMusic();
-                    LOGGER.info("music queue is full 100 and  insert into databases");
-                }
-                if (blockingQueueComments.size() >= 100) {
-                    insertComments();
-                    LOGGER.info("comments queue is full 100 and  insert into databases");
-                }
-                if (blockingQueueUser.size() >= 100) {
-                    insertUser();
-                    LOGGER.info("user queue is full 100 and  insert into databases");
-                }
+                JSONObject jsonObject = new JSONObject();
+                Integer songId = UserSpider.songIdQueue.take();
+                LOGGER.info("song spider add songId={}",songId);
+                jsonObject.put(SongSpider.PARAS_SONGID,songId );
+                executorService.submit(() -> spider.start("http://music.163.com/weapi/v1/resource/comments/R_SO_4_" + songId + "?csrf_token=",jsonObject));
             } catch (InterruptedException e) {
-                Thread.currentThread().interrupt();
-                e.printStackTrace();
-            } catch (ExecutionException e) {
                 e.printStackTrace();
             }
         }
     }
 
+    /**
+     * user数据的爬取，单线程
+     */
+    private void userSpiderThread() {
+        LOGGER.info("Enter userSpiderThread method");
+        Spider userSpider = new UserSpider();
+        while (true) {
+            JSONObject paras = new JSONObject();
+            try {
+                Integer uid = SongSpider.uidQueue.take();
+                LOGGER.info("user spider add uid={}",uid);
+                paras.put(UserSpider.PARAS_UID, uid);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+                break;
+            }
+            userSpider.start("http://music.163.com/weapi/v1/play/record?csrf_token=",paras);
+        }
+        LOGGER.info("Exit userSpiderThread method");
+    }
+
+    /**
+     * TODO 或者使用线程通讯，当爬取数据之后，检查队列大小，进行线程唤醒
+     * 执行任务合并，完成数据的入库操作
+     */
+    private void complateTask() {
+        LOGGER.info("Enter spider complateTask method");
+        while (true) {
+            if (SongSpider.blockingQueueComments.size() >= 100) {
+                LOGGER.info("do spider complateTask method and insert commentsVo");
+                insertComments();
+            }
+            if (SongSpider.blockingQueueUser.size() >= 100) {
+                LOGGER.info("do spider complateTask method and insert userVo");
+                insertUser();
+            }
+            if (SongSpider.blockingQueueMusic.size() >= 100) {
+                LOGGER.info("do spider complateTask method and insert musicVo");
+                insertMusic();
+            }
+            try {
+                Thread.sleep(5000);//每五秒检查一次队列
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+    /**
+     * 经过测试，当主键相同时不会插入
+     */
     private void insertMusic() {
         LOGGER.info("Enter insertMusic method");
         List<MusicVo> temp = new ArrayList<>();
-        blockingQueueMusic.drainTo(temp);
+        SongSpider.blockingQueueMusic.drainTo(temp);
         musicRepository.save(temp);
         LOGGER.info("Exit insertMusic method");
     }
@@ -138,7 +130,7 @@ public class SpiderMusic {
     private void insertComments() {
         LOGGER.info("Enter insertComments method");
         List<CommentsVo> temp = new ArrayList<>();
-        blockingQueueComments.drainTo(temp);
+        SongSpider.blockingQueueComments.drainTo(temp);
         commentsRepository.save(temp);
         LOGGER.info("Exit insertComments method");
     }
@@ -147,75 +139,10 @@ public class SpiderMusic {
     private void insertUser() {
         LOGGER.info("Enter insertUser method");
         List<UserVo> temp = new ArrayList<>();
-        blockingQueueUser.drainTo(temp);
+        SongSpider.blockingQueueUser.drainTo(temp);
         userRepository.save(temp);
         LOGGER.info("Exit insertUser method");
     }
 
 
-    private void calculate(JSONObject jsonObject) {
-        JSONArray comments = jsonObject.getJSONArray("comments");
-        JSONArray hotComments = jsonObject.getJSONArray("hotComments");
-        Integer songId = jsonObject.getInteger("songId");
-
-        List<CommentsVo> commentsVos = new ArrayList<>();
-        List<UserVo> userVos = new ArrayList<>();
-
-        getCommentsAndUser(comments, songId, commentsVos, userVos);
-        getCommentsAndUser(hotComments, songId, commentsVos, userVos);
-
-        Integer total = jsonObject.getInteger("total");
-        MusicVo musicVo = new MusicVo();
-        musicVo.setCommitTotal(total);
-        musicVo.setId(songId);
-        blockingQueueMusic.add(musicVo);
-        blockingQueueUser.addAll(userVos);
-        blockingQueueComments.addAll(commentsVos);
-    }
-
-    private void getCommentsAndUser(JSONArray comments, Integer songId, List<CommentsVo> commentsVos, List<UserVo> userVos) {
-        for (int i = 0; i < comments.size(); i++) {
-            JSONObject comment = comments.getJSONObject(i);
-
-            JSONObject user = comment.getJSONObject("user");
-            Integer userId = user.getInteger("userId");
-            String avatarUrl = user.getString("avatarUrl");
-            String nickname = user.getString("nickname");
-
-            UserVo userVo = new UserVo();
-            userVo.setAvatarUrl(avatarUrl);
-            userVo.setId(userId);
-            userVo.setNickname(nickname);
-            userVos.add(userVo);
-
-            CommentsVo commentsVo = new CommentsVo();
-            commentsVo.setId(comment.getInteger("commentId"));
-            commentsVo.setTime(comment.getInteger("time"));
-            commentsVo.setContent(comment.getString("content"));
-            commentsVo.setSongId(songId);
-            commentsVo.setUserId(userId);
-            commentsVos.add(commentsVo);
-        }
-    }
-
-    class task implements Callable<JSONObject> {
-
-        private int songId;
-
-        public task(int andIncrement) {
-            this.songId = andIncrement;
-        }
-
-        @Override
-        public JSONObject call() throws Exception {
-            LOGGER.info("Enter task and current num={}", songId);
-            JSONObject jsonObject = spiderMetMusic("http://music.163.com/weapi/v1/resource/comments/R_SO_4_" + songId + "?csrf_token=");
-            if (jsonObject != null && jsonObject.getInteger("code") != null && jsonObject.getInteger("code") == 200) {
-                LOGGER.info("Exit task and musicVo=isNotNull");
-                return jsonObject;
-            }
-            LOGGER.info("Exit task and musicVo=null");
-            return null;
-        }
-    }
 }

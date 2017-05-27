@@ -7,7 +7,7 @@ import javax.persistence.Id;
 /**
  * Created by wangq on 2017/5/26.
  */
-@Entity(name = "music_comments")
+@Entity(name = "netmusic_comments")
 public class CommentsVo {
 
     @Id
@@ -22,7 +22,7 @@ public class CommentsVo {
     @Column(name = "user_id", nullable = false)
     private Integer userId;
 
-    @Column(name = "time")
+    @Column(name = "commit_time")
     private Integer time;
 
     @Column(name = "song_id", nullable = false)

@@ -1,27 +1,13 @@
 package wangqiang.website;
 
-import com.alibaba.fastjson.JSONArray;
-import com.alibaba.fastjson.JSONObject;
-import org.apache.http.HttpHost;
-import us.codecraft.webmagic.Page;
-import us.codecraft.webmagic.Site;
-import us.codecraft.webmagic.processor.PageProcessor;
-import us.codecraft.webmagic.selector.Selectable;
-import wangqiang.website.modal.CommentsVo;
-import wangqiang.website.modal.UserVo;
-import wangqiang.website.utils.Spider;
-
-import java.util.ArrayList;
-import java.util.List;
-
-import static wangqiang.website.utils.Spider.spiderMetMusic;
+import wangqiang.website.utils.SpiderUtils;
 
 /**
  * Created by wangq on 2017/5/15.
  */
 public class Main {
     public static void main(String[] args) {
-//        us.codecraft.webmagic.Spider spider = us.codecraft.webmagic.Spider.create(new PageProcessor() {
+//        us.codecraft.webmagic.SpiderUtils spider = us.codecraft.webmagic.SpiderUtils.create(new PageProcessor() {
 //            @Override
 //            public void process(Page page) {
 //                List<Object> ips = new ArrayList<>();
@@ -54,9 +40,7 @@ public class Main {
 //            List<Selectable> ports = resultItems.get("ports");
 //            System.out.println(ips + ":" + ports);
 //        }).run();
-
-        Spider spider = new Spider();
-
-        spider.getSong();
+        SpiderUtils spiderUtils = new SpiderUtils();
+        spiderUtils.getUserPlayList();
     }
 }

@@ -69,7 +69,7 @@ public class SpiderUtils {
         }
         String type = execute.getEntity().getContentType().getValue();
         String s = new String(bytes);
-
+        s = new String(s.getBytes(), Charset.forName("utf-8"));//解决编码问题
         if (type.contains("application/json") || type.contains("text/plain")) {
             LOGGER.info("return msg type={}", type);
             JSONObject jsonObject = null;

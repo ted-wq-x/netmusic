@@ -37,7 +37,7 @@ public class InitListener implements ApplicationListener<ApplicationReadyEvent> 
     @PostConstruct
     public void init(){
         try {
-            SongSpider.uidQueue.put(userRepository.selectMaxId());//初始化数据
+            SongSpider.uidQueue.put(94442174);//初始化数据
         } catch (InterruptedException e) {
             e.printStackTrace();
         }

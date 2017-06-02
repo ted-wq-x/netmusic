@@ -47,7 +47,11 @@ public class UserSpider extends Spider {
      */
     @Override
     protected void analysisResult(JSONObject jsonObject) {
+        LOGGER.info("Enter user analysisResult method");
         JSONArray weekData = jsonObject.getJSONArray("allData");
+        if (weekData == null) {
+            return;
+        }
         for (int i = 0; i < weekData.size(); i++) {
             Integer songId = weekData.getJSONObject(i).getJSONObject("song").getInteger("id");
             try {
@@ -56,6 +60,6 @@ public class UserSpider extends Spider {
                 e.printStackTrace();
             }
         }
-
+        LOGGER.info("Exit user analysisResult method");
     }
 }

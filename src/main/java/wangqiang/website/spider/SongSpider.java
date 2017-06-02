@@ -4,6 +4,7 @@ import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import wangqiang.website.listener.SpiderMusic;
 import wangqiang.website.modal.CommentsVo;
 import wangqiang.website.modal.MusicVo;
 import wangqiang.website.modal.UserVo;
@@ -26,9 +27,10 @@ public class SongSpider extends Spider {
      * 缓存爬取的数据，达到100个时存入数据库
      */
     public static final BlockingQueue<UserVo> blockingQueueUser = new LinkedBlockingQueue<>();
-    public static final BlockingQueue<Integer> uidQueue = new LinkedBlockingQueue<>();
     public static final BlockingQueue<MusicVo> blockingQueueMusic = new LinkedBlockingQueue<>();
     public static final BlockingQueue<CommentsVo> blockingQueueComments = new LinkedBlockingQueue<>();
+
+    public static final BlockingQueue<Integer> uidQueue = new LinkedBlockingQueue<>();
 
     private ThreadLocal<Integer> threadLocal = new ThreadLocal<>();
 
@@ -41,6 +43,14 @@ public class SongSpider extends Spider {
         para.put("total", true);
         para.put("rid", "R_SO_4_" + songId);
         threadLocal.set(songId);//线程绑定该参数
+
+        //队列中的任务使用标记
+        try {
+            SpiderMusic.queue.take();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
         return para;
     }
 
@@ -96,7 +106,9 @@ public class SongSpider extends Spider {
             commentsVo.setUserId(userId);
             commentsVos.add(commentsVo);
 
-            uidQueue.add(userId);//存放带爬取的uid
+            if (uidQueue.size() <= 1000) {
+                uidQueue.add(userId);//存放带爬取的uid,限制队列大小
+            }
         }
     }
 

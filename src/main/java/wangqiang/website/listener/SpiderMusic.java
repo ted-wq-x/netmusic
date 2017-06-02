@@ -38,8 +38,12 @@ public class SpiderMusic {
     @Autowired
     private MusicRepository musicRepository;
 
-    private ExecutorService executorService = Executors.newFixedThreadPool((Runtime.getRuntime().availableProcessors() + 1)*2);
+    private final ExecutorService executorService = Executors.newFixedThreadPool((Runtime.getRuntime().availableProcessors()) * 2);
 
+    /**
+     * 限制向任务队列提交任务的个数
+     */
+    public static LinkedBlockingQueue<Integer> queue = new LinkedBlockingQueue<>(25);
 
     public void startThisSpider() {
         LOGGER.info("Enter startThisSpider method。");
@@ -49,20 +53,23 @@ public class SpiderMusic {
         LOGGER.info("Exit startThisSpider method.");
     }
 
-
     /**
      * song数据的爬取，使用的是线程池
      */
     private void songSpiderThread(){
+        LOGGER.info("Enter songSpiderThread method");
         Thread.currentThread().setName("song-spider-main");
         while (true) {
             Spider spider = new SongSpider();
             try {
+                queue.put(1);//控制线程池中任务队列大小
                 JSONObject jsonObject = new JSONObject();
                 Integer songId = UserSpider.songIdQueue.take();
-                LOGGER.info("song spider add songId={}",songId);
+                LOGGER.info("song spider add songId={} and queue size={}",songId,UserSpider.songIdQueue.size());
                 jsonObject.put(SongSpider.PARAS_SONGID,songId );
-                executorService.submit(() -> spider.start("http://music.163.com/weapi/v1/resource/comments/R_SO_4_" + songId + "?csrf_token=",jsonObject));
+                executorService.submit(() -> {
+                    spider.start("http://music.163.com/weapi/v1/resource/comments/R_SO_4_" + songId + "?csrf_token=", jsonObject);
+                });
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
@@ -80,7 +87,7 @@ public class SpiderMusic {
             JSONObject paras = new JSONObject();
             try {
                 Integer uid = SongSpider.uidQueue.take();
-                LOGGER.info("user spider add uid={}",uid);
+                LOGGER.info("user spider add uid={} and uid queue size={}",uid, SongSpider.uidQueue.size());
                 paras.put(UserSpider.PARAS_UID, uid);
             } catch (InterruptedException e) {
                 e.printStackTrace();

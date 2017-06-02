@@ -1,6 +1,7 @@
 package wangqiang.website;
 
 import org.junit.Assert;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,13 +30,15 @@ public class NetmusicApplicationTests {
 	@Autowired
 	private CommentsRepository commentsRepository;
 	@Test
+	@Ignore
 	public void contextLoads() {
-		CommentsVo commentsVo = new CommentsVo();
-		commentsVo.setId(1);
-		commentsVo.setUserId(482258385);
-		commentsVo.setTime(1174511619);
-		commentsVo.setSongId(4083399);commentsVo.setContent("\uD83C\uDF1D初一王强……");
-		commentsRepository.save(commentsVo);
+//		CommentsVo commentsVo = new CommentsVo();
+//		commentsVo.setId(1);
+//		commentsVo.setUserId(482258385);
+//		commentsVo.setTime(1174511619);
+//		commentsVo.setSongId(4083399);commentsVo.setContent("\uD83C\uDF1D初一王强……");
+//		commentsRepository.save(commentsVo);
+		System.out.println(commentsRepository.findOne(5074464));
 	}
 
 }

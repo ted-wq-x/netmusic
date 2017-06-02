@@ -33,3 +33,10 @@ create table netmusic_user
 )
 ;
 
+INSERT INTO netmusic_user VALUE (94442174,'萌太奇-熊','http://p1.music.126.net/gEEMi6-dEI8EWYw9xEX0fA==/1401877327530352.jpg')
+
+# 修改字符集
+# ALTER DATABASE tale CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci;
+# ALTER TABLE netmusic_comments CONVERT TO CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+# ALTER TABLE netmusic_comments MODIFY content TEXT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+# SHOW VARIABLES WHERE Variable_name LIKE 'character_set_%' OR Variable_name LIKE 'collation%';

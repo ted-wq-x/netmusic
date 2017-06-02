@@ -82,6 +82,8 @@ public class ProxyPool {
                         ips.add(ipPort[0]);
                         ports.add(ipPort[1]);
                     }
+                } else if (url.contains("goubanjia")) {
+
                 }
                 page.putField("ips", ips);
                 page.putField("ports", ports);
@@ -119,11 +121,12 @@ public class ProxyPool {
      * @param spider
      */
     private static void addSpiderUrl(Spider spider) {
+        spider.addUrl("http://api.xicidaili.com/");
         for (int i = 1; i <= 10; i++) {
 //            TODO ip不够用
             spider.addUrl("http://www.kuaidaili.com/proxylist/" + i);
+            spider.addUrl("http://www.goubanjia.com/free/gngn/index"+i+".shtml");
         }
-        spider.addUrl("http://api.xicidaili.com/");
     }
 
     @PostConstruct
